@@ -53,7 +53,7 @@ function Navbar() {
           </button>
           <div
             className={`sm:hidden ${
-              dropdown
+              !dropdown
                 ? "translate-x-full opacity-0"
                 : "translate-x-0 opacity-100"
             }   absolute z-10 right-0 bg-white divide-y transition ease-in duration-300 divide-gray-100  shadow w-[50%]  dark:bg-gray-700`}
