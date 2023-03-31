@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./css/galery.css";
 import { Autoplay, Pagination } from "swiper";
-import Embed from "react-embed";
+
 export default function Galery() {
   return (
     <div className="w-full h-full flex flex-col items-center mb-36">
@@ -36,7 +36,7 @@ export default function Galery() {
                 data-aos-delay="1000"
                 className="flex flex-col items-center justify-center space-y-4"
               >
-                <span className="flex items-center justify-center text-[24px] font-poppins font-semibold capitalize text-white">
+                <span className="flex items-center justify-center sm:text-[24px] font-poppins font-semibold capitalize text-white">
                   Hyundai Palisade
                 </span>
                 <span className="flex items-center justify-center text-white">
@@ -52,7 +52,7 @@ export default function Galery() {
                 data-aos-delay="1000"
                 className="flex flex-col items-center justify-center space-y-4"
               >
-                <span className="flex items-center justify-center text-[24px] font-poppins font-semibold capitalize text-white">
+                <span className="flex items-center justify-center sm:text-[24px] font-poppins font-semibold capitalize text-white">
                   Hyundai Palisade
                 </span>
                 <span className="flex items-center justify-center text-white">
@@ -69,7 +69,7 @@ export default function Galery() {
                 data-aos-delay="1000"
                 className="flex flex-col items-center justify-center space-y-4"
               >
-                <span className="flex items-center justify-center text-[24px] font-poppins font-semibold capitalize text-white">
+                <span className="flex items-center justify-center sm:text-[24px] font-poppins font-semibold capitalize text-white">
                   Hyundai Palisade
                 </span>
                 <span className="flex items-center justify-center text-white">

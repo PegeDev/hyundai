@@ -35,7 +35,7 @@ function Product() {
         </h1>
         <div className="border-slate-800 w-[70%] h-full border-b-4 rounded-full" />
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {product.map((val, i) => (
           <div key={i} className="border-2 rounded-lg w-full  py-4">
             <img
@@ -44,7 +44,7 @@ function Product() {
               alt={val.title}
             />
             <div className="w-full flex flex-col items-center">
-              <span className="font-poppins font-semibold text-[32px] text-slate-800">
+              <span className="font-poppins font-semibold sm:text-[32px] text-slate-800">
                 {val.title}
               </span>
               <button className="bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm max-w-xs font-semibold text-white rounded-sm">

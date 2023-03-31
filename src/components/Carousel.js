@@ -82,8 +82,10 @@ export default function Carousel() {
                 <span className="font-extrabold  font-poppins text-[64px] text-white">
                   {val.title}
                 </span>
-                <span className="font-poppins text-white">{val.content}</span>
-                <button className="hover:bg-white hover:text-gray-800 font-semibold transition duration-300 ease-linear border-2 border-white text-white font-poppins mt-4 px-4 py-2 text-sm rounded-xl">
+                <span className="font-poppins text-white text-sm sm:text-[20px]">
+                  {val.content}
+                </span>
+                <button className="hover:bg-white hover:text-gray-800 font-semibold transition duration-300 ease-linear border-2 border-white text-white font-poppins mt-4 px-4 py-2 text-sm rounded-lg">
                   Read More
                 </button>
               </div>

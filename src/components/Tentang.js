@@ -34,7 +34,7 @@ function Tentang() {
           </h1>
           <div className="border-white w-[70%] h-full border-b-4 rounded-full" />
         </div>
-        <div className="flex items-center justify-around w-full h-full container mx-auto">
+        <div className="hidden sm:flex items-center justify-around w-full h-full container mx-auto">
           <div className="flex flex-col">
             <h1 className="font-poppins font-semibold text-white text-[46px] mb-4">
               Akbar
@@ -53,6 +53,27 @@ function Tentang() {
               src="https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2022-01-13-at-11.43.49-piynhzp94y7wd29739y3lm9oebllqkuldz5g95k3ns.jpeg"
               alt="sales"
             />
+          </div>
+        </div>
+        <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
+          <div className="rounded-full overflow-hidden w-[80%]">
+            <img
+              src="https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2022-01-13-at-11.43.49-piynhzp94y7wd29739y3lm9oebllqkuldz5g95k3ns.jpeg"
+              alt="sales"
+            />
+          </div>
+          <div className="flex flex-col w-full px-4 py-4">
+            <h1 className="font-poppins font-medium text-white text-[46px] mb-2">
+              Akbar
+            </h1>
+            <span className="inline-flex items-center space-x-2 text-white font-poppins text-[24px] ">
+              <FaPhone />
+              <span>087886801110</span>
+            </span>
+            <span className="inline-flex items-center space-x-2 text-white font-poppins text-[24px] ">
+              <FaWhatsapp />
+              <span>087886801110</span>
+            </span>
           </div>
         </div>
         {/* <div className="w-[65%] h-full">
