@@ -66,7 +66,7 @@ function Promo() {
               alt="promo"
             />
           </div>
-          <div className="flex flex-col py-8 px-16 space-y-4">
+          <div className="flex flex-col  text-slate-800 py-8 px-16 space-y-4">
             <span className="font-poppins font-semibold text-[48px]">
               PROMO GIIASS
             </span>
