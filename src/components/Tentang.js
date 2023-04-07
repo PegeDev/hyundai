@@ -80,15 +80,15 @@ function Tentang() {
             <h1 className="font-poppins font-medium text-white text-[46px] mb-2 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
               Cepy Setiyawan
             </h1>
-            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
               <FaPhone />
               <span>0813-8761-5200</span>
             </span>
-            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
               <FaWhatsapp />
               <span>0813-8761-5200</span>
             </span>
-            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
               <FaInstagram />
               <span>@cepy_hyundai_jabodetabek</span>
             </span>
