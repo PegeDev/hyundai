@@ -18,9 +18,9 @@ function App() {
       <div className="max-w-full sm:h-[550px] h-[100vh] ">
         <Carousel />
       </div>
-      <div className="max-w-full select-none">
+      {/* <div className="max-w-full select-none">
         <Hero />
-      </div>
+      </div> */}
       <div className="space-y-8 ">
         <div className="px-4">
           <Product />
