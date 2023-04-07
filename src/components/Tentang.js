@@ -69,9 +69,9 @@ function Tentang() {
           </div>
         </div>
         <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
-          <div className="rounded-full overflow-hidden w-[50%]">
+          <div class="w-96 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
             <img
-              className="object-cover w-full h-full"
+              className="hover:scale-110 transition ease-linear duration-300"
               src={Sales}
               alt="sales"
             />
