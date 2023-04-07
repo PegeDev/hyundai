@@ -69,7 +69,7 @@ export default function Carousel() {
         {sliderArr.map((val, i) => (
           <SwiperSlide key={i}>
             <img
-              className="object-cover object-center"
+              className="object-cover object-center "
               src={val.url}
               alt={`slider-${i}`}
             />

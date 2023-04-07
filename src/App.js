@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="w-full flex flex-col overflow-x-hidden">
       <Navbar />
-      <div className="max-w-full h-[550px] ">
+      <div className="max-w-full h-[100vh] ">
         <Carousel />
       </div>
       <div className="max-w-full select-none">
