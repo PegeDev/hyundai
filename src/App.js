@@ -21,11 +21,11 @@ function App() {
       <div className="max-w-full select-none">
         <Hero />
       </div>
-      <div className="space-y-8">
-        <div className="">
+      <div className="space-y-8 ">
+        <div className="px-4">
           <Product />
         </div>
-        <div className="">
+        <div className="px-4">
           <Promo />
         </div>
         <div className="">

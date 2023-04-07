@@ -69,15 +69,17 @@ function Tentang() {
           </div>
         </div>
         <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
-          <div class="w-96 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
-            <img
-              className="hover:scale-110 transition ease-linear duration-300"
-              src={Sales}
-              alt="sales"
-            />
+          <div class="avatar">
+            <div class="w-80 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+              <img
+                className="hover:scale-110 transition ease-linear duration-300"
+                src={Sales}
+                alt="sales"
+              />
+            </div>
           </div>
           <div className="flex flex-col w-full px-4 py-4">
-            <h1 className="font-poppins font-medium text-white text-[46px] mb-2 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
+            <h1 className="font-poppins font-medium text-white text-[44px] mb-2 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
               Cepy Setiyawan
             </h1>
             <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">

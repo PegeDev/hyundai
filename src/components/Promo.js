@@ -46,7 +46,7 @@ function Promo() {
           x
         </label>
       </div>
-      <div className=" w-full h-full flex flex-col items-center justify-center py-8 text-slate-800 ">
+      <div className="overflow-hidden w-full h-full flex flex-col items-center justify-center py-8 text-slate-800 ">
         <div
           data-aos="zoom-in"
           className="mb-8 flex flex-col items-center justify-center"
@@ -68,7 +68,7 @@ function Promo() {
             />
           </label>
           <div className="flex flex-col py-8 px-16 space-y-4">
-            <span className="font-poppins font-semibold text-[48px] uppercase">
+            <span className="font-poppins font-bold text-[48px] uppercase">
               PROMO Stargazer & Creta{" "}
               <span className="text-red-500">Prime</span>
             </span>
@@ -83,7 +83,7 @@ function Promo() {
         </div>
         <div
           data-aos="fade-right"
-          className="sm:hidden w-full bg-white flex flex-col items-center shadow-sm shadow-white container mx-auto rounded-sm  border-2"
+          className="overflow-hidden sm:hidden w-full bg-white flex flex-col items-center shadow-sm shadow-white container mx-auto rounded-sm  border-2"
         >
           <div className="w-[400px] h-[360px]">
             <img
@@ -92,8 +92,8 @@ function Promo() {
               alt="promo"
             />
           </div>
-          <div className="flex flex-col  text-slate-800 py-8 px-16 space-y-4">
-            <span className="font-poppins font-semibold text-[48px]">
+          <div className="overflow-hiddenflex flex-col  text-slate-800 py-8 px-16 space-y-4">
+            <span className="font-poppins font-bold text-[48px]">
               PROMO Stargazer & Creta{" "}
               <span className="text-red-500">Prime</span>
             </span>
