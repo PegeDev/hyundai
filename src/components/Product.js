@@ -29,13 +29,19 @@ function Product() {
   ];
   return (
     <div className="w-full flex flex-col items-center justify-center my-16 container mx-auto">
-      <div className="mb-8 flex flex-col items-center justify-center">
+      <div
+        data-aos="zoom-in"
+        className="mb-8 flex flex-col items-center justify-center"
+      >
         <h1 className="font-poppins font-semibold text-[46px] text-slate-800">
           Product
         </h1>
         <div className="border-slate-800 w-[70%] h-full border-b-4 rounded-full" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div
+        data-aos="fade-left"
+        className="grid grid-cols-1 sm:grid-cols-3 gap-4"
+      >
         {product.map((val, i) => (
           <div key={i} className="border-2 rounded-lg w-full  py-4">
             <img

@@ -1,7 +1,7 @@
 import React from "react";
-import { FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa";
 import SimulasiKredit from "./SimulasiKredit";
-
+import Sales from "../assets/images/sales.jpeg";
 function Tentang() {
   return (
     <div className="w-full h-full ">
@@ -28,7 +28,10 @@ function Tentang() {
         </svg>
       </div>
       <div className=" w-full h-full flex flex-col items-center justify-center  bg-slate-800 py-8">
-        <div className="mb-8 flex flex-col items-center justify-center">
+        <div
+          data-aos="zoom-in"
+          className="mb-8 flex flex-col items-center justify-center"
+        >
           <h1 className="font-poppins font-semibold text-[46px] text-white">
             Tentang Sales
           </h1>
@@ -36,43 +39,58 @@ function Tentang() {
         </div>
         <div className="hidden sm:flex items-center justify-around w-full h-full container mx-auto">
           <div className="flex flex-col">
-            <h1 className="font-poppins font-semibold text-white text-[46px] mb-4">
-              Akbar
+            <h1 className="font-poppins font-semibold text-white text-[46px] mb-4 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
+              Cepy Setiyawan
             </h1>
-            <span className="inline-flex items-center space-x-2 text-white font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
               <FaPhone />
-              <span>087886801110</span>
+              <span>0813-8761-5200</span>
             </span>
-            <span className="inline-flex items-center space-x-2 text-white font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
               <FaWhatsapp />
-              <span>087886801110</span>
+              <span>0813-8761-5200</span>
             </span>
+            <a
+              href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
+              className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] "
+            >
+              <FaInstagram />
+              <span>cepy_hyundai_jabodetabek</span>
+            </a>
           </div>
-          <div className="rounded-full overflow-hidden">
-            <img
-              src="https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2022-01-13-at-11.43.49-piynhzp94y7wd29739y3lm9oebllqkuldz5g95k3ns.jpeg"
-              alt="sales"
-            />
+          <div class="avatar">
+            <div class="w-96 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+              <img
+                className="hover:scale-110 transition ease-linear duration-300"
+                src={Sales}
+                alt="sales"
+              />
+            </div>
           </div>
         </div>
         <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
-          <div className="rounded-full overflow-hidden w-[80%]">
+          <div className="rounded-full overflow-hidden w-[50%]">
             <img
-              src="https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2022-01-13-at-11.43.49-piynhzp94y7wd29739y3lm9oebllqkuldz5g95k3ns.jpeg"
+              className="object-cover w-full h-full"
+              src={Sales}
               alt="sales"
             />
           </div>
           <div className="flex flex-col w-full px-4 py-4">
-            <h1 className="font-poppins font-medium text-white text-[46px] mb-2">
-              Akbar
+            <h1 className="font-poppins font-medium text-white text-[46px] mb-2 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
+              Cepy Setiyawan
             </h1>
-            <span className="inline-flex items-center space-x-2 text-white font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
               <FaPhone />
-              <span>087886801110</span>
+              <span>0813-8761-5200</span>
             </span>
-            <span className="inline-flex items-center space-x-2 text-white font-poppins text-[24px] ">
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
               <FaWhatsapp />
-              <span>087886801110</span>
+              <span>0813-8761-5200</span>
+            </span>
+            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
+              <FaInstagram />
+              <span>@cepy_hyundai_jabodetabek</span>
             </span>
           </div>
         </div>

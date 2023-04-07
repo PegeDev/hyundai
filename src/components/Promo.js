@@ -1,5 +1,5 @@
 import React from "react";
-
+import PromoImg from "../assets/images/promo.jpeg";
 function Promo() {
   return (
     <div className="w-full h-full my-16">
@@ -25,8 +25,32 @@ function Promo() {
           />
         </svg>
       </div> */}
-      <div className=" w-full h-full flex flex-col items-center justify-center py-8">
-        <div className="mb-8 flex flex-col items-center justify-center">
+      <input type="checkbox" id="modal-img" className="modal-toggle" />
+      <div className="modal select-none">
+        <label
+          htmlFor="modal-img"
+          className="absolute  flex items-center justify-center bg-slate-800/70 w-full h-full cursor-pointer z-40 "
+        >
+          <div className=" absolute z-50  w-[70%] h-[80%]">
+            <img
+              className="w-full h-full object-contain"
+              src={PromoImg}
+              alt="promo-img"
+            />
+          </div>
+        </label>
+        <label
+          htmlFor="modal-img "
+          className="absolute cursor-pointer z-50 top-0 right-0 m-4 transition ease-linear duration-300 rounded-full ring-2 ring-white w-10 h-10 flex items-center justify-center text-2xl hover:bg-white hover:text-slate-800 hover:ring-white text-white text-bold font-poppins"
+        >
+          x
+        </label>
+      </div>
+      <div className=" w-full h-full flex flex-col items-center justify-center py-8 text-slate-800 ">
+        <div
+          data-aos="zoom-in"
+          className="mb-8 flex flex-col items-center justify-center"
+        >
           <h1 className="font-poppins font-semibold text-[46px] text-slate-800">
             Promo
           </h1>
@@ -36,22 +60,24 @@ function Promo() {
           data-aos="fade-right"
           className=" w-full bg-white hidden sm:flex items-center shadow-sm shadow-white container mx-auto rounded-sm  border-2"
         >
-          <div className="w-[400px] h-[360px]">
+          <label htmlFor="modal-img" className="w-[400px] h-[360px]">
             <img
               className="object-cover object-center w-full h-full"
-              src="https://dealermobilhyundai.id/wp-content/uploads/2021/11/creta-banner-pc.jpg"
+              src={PromoImg}
               alt="promo"
             />
-          </div>
+          </label>
           <div className="flex flex-col py-8 px-16 space-y-4">
-            <span className="font-poppins font-semibold text-[48px]">
-              PROMO GIIASS
+            <span className="font-poppins font-semibold text-[48px] uppercase">
+              PROMO Stargazer & Creta{" "}
+              <span className="text-red-500">Prime</span>
             </span>
             <span className="font-poppins ">
-              Dapatkan Penawaran GIIAS Terbaik Disini
+              Dapatkan Penawaran Stargazer & Creta{" "}
+              <span className="text-red-500">Prime</span> Terbaik Disini
             </span>
             <button className="w-fit bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
-              PROMO GIIASS
+              Read More
             </button>
           </div>
         </div>
@@ -62,19 +88,21 @@ function Promo() {
           <div className="w-[400px] h-[360px]">
             <img
               className="object-cover object-center w-full h-full"
-              src="https://dealermobilhyundai.id/wp-content/uploads/2021/11/creta-banner-pc.jpg"
+              src={PromoImg}
               alt="promo"
             />
           </div>
           <div className="flex flex-col  text-slate-800 py-8 px-16 space-y-4">
             <span className="font-poppins font-semibold text-[48px]">
-              PROMO GIIASS
+              PROMO Stargazer & Creta{" "}
+              <span className="text-red-500">Prime</span>
             </span>
             <span className="font-poppins ">
-              Dapatkan Penawaran GIIAS Terbaik Disini
+              Dapatkan Penawaran Stargazer & Creta{" "}
+              <span className="text-red-500">Prime</span> Terbaik Disini
             </span>
             <button className="w-fit bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
-              PROMO GIIASS
+              Read More
             </button>
           </div>
         </div>
