@@ -1,41 +1,27 @@
 import { useEffect } from "react";
 import "./App.css";
-import Carousel from "./components/Carousel";
-import Galery from "./components/Galery";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Product from "./components/Product";
-import Promo from "./components/Promo";
-import Tentang from "./components/Tentang";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Error404 from "./pages/Error404";
+import Promo from "./pages/Promo";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 function App() {
   useEffect(() => {
     document.title = "Dealer Mobil Hyundai";
+    AOS.init({
+      duration: 2000,
+    });
   }, []);
   return (
-    <div className="w-full flex flex-col overflow-x-hidden">
-      <Navbar />
-      <div className="max-w-full h-[100vh] ">
-        <Carousel />
-      </div>
-      {/* <div className="max-w-full select-none">
-        <Hero />
-      </div> */}
-      <div className="space-y-8 ">
-        <div className="px-4">
-          <Product />
-        </div>
-        <div className="px-4">
-          <Promo />
-        </div>
-        <div className="">
-          <Galery />
-        </div>
-        <div className="">
-          <Tentang />
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/promo" element={<Promo />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </Router>
   );
 }
 

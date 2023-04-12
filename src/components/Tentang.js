@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa";
 import SimulasiKredit from "./SimulasiKredit";
 import Sales from "../assets/images/sales.jpeg";
+
 function Tentang() {
   return (
     <div className="w-full h-full ">
@@ -58,8 +59,8 @@ function Tentang() {
               <span>cepy_hyundai_jabodetabek</span>
             </a>
           </div>
-          <div class="avatar">
-            <div class="w-96 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+          <div className="avatar">
+            <div className="w-96 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
               <img
                 className="hover:scale-110 transition ease-linear duration-300"
                 src={Sales}
@@ -69,8 +70,8 @@ function Tentang() {
           </div>
         </div>
         <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
-          <div class="avatar">
-            <div class="w-80 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+          <div className="avatar">
+            <div className="w-72 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
               <img
                 className="hover:scale-110 transition ease-linear duration-300"
                 src={Sales}
@@ -78,8 +79,8 @@ function Tentang() {
               />
             </div>
           </div>
-          <div className="flex flex-col w-full px-4 py-4">
-            <h1 className="font-poppins font-medium text-white text-[44px] mb-2 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
+          <div className="flex flex-col justify-center w-full p-4">
+            <h1 className="font-poppins font-medium text-white text-[40px] mb-2 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
               Cepy Setiyawan
             </h1>
             <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
@@ -96,9 +97,10 @@ function Tentang() {
             </span>
           </div>
         </div>
-        {/* <div className="w-[65%] h-full">
+
+        <div className="sm:w-[65%] w-full px-4 h-full py-4">
           <SimulasiKredit />
-        </div> */}
+        </div>
         <div className="py-8 space-y-8 flex flex-col items-center justify-center font-poppins text-white container mx-auto">
           <div className="w-full h-full border-white border-b-2" />
           <span className="">

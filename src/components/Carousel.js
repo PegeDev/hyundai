@@ -7,18 +7,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Carousel() {
   const [show, setShow] = useState(true);
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-  }, []);
   const sliderArr = [
     {
       url: "https://dealermobilhyundai.id/wp-content/uploads/2022/04/Home-Banner-1860-x-720-pc.webp",

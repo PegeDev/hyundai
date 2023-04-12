@@ -2,7 +2,7 @@ import React from "react";
 import PromoImg from "../assets/images/promo.jpeg";
 function Promo() {
   return (
-    <div className="w-full h-full my-16">
+    <div className="w-full my-8">
       {/* <div className="rotate-180">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ function Promo() {
               <span className="text-red-500">Prime</span> Terbaik Disini
             </span>
             <button className="w-fit bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
-              Read More
+              <a href="/promo">Read More</a>
             </button>
           </div>
         </div>
@@ -102,7 +102,7 @@ function Promo() {
               <span className="text-red-500">Prime</span> Terbaik Disini
             </span>
             <button className="w-fit bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
-              Read More
+              <a href="/promo">Read More</a>
             </button>
           </div>
         </div>

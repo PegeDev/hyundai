@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import HyundaiLogo from "../assets/hyundai.png";
 import { HiChevronDown, HiMenu, HiMenuAlt3 } from "react-icons/hi";
 import { click } from "@testing-library/user-event/dist/click";
-function Navbar() {
+import { Link } from "react-router-dom";
+function Navbar({ page }) {
   const [clicked, setClicked] = useState("home");
   const [dropdown, setDropdown] = useState(false);
   const [produk, setProduk] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
     setProduk(true);
   };
   return (
-    <div className="fixed sm:static z-50 w-full flex   bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800">
+    <div className="fixed z-50 w-full flex   bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800">
       <div className="relative mx-auto w-[1000px] flex items-center justify-between px-4">
         <div className="w-full">
           <img className="w-[200px]" src={HyundaiLogo} alt="hyundai-logo" />
@@ -22,50 +23,69 @@ function Navbar() {
               onClick={() => setClicked("home")}
               className={`relative py-3 flex items-center select-none cursor-pointer justify-center`}
             >
-              <span>Home</span>
-              {clicked === "home" && (
-                <div className={`absolute bottom-0 border-b-4  w-full`} />
-              )}
+              <a href="/">
+                <span>Home</span>
+                {clicked === "home" && (
+                  <div className={`absolute bottom-0 border-b-4  w-full`} />
+                )}
+              </a>
+            </li>
+
+            <li
+              onClick={() => setClicked("produk")}
+              className={`relative py-3 flex items-center select-none cursor-pointer justify-center`}
+            >
+              <a href="/#produk">
+                <span>Produk</span>
+                {clicked === "produk" && (
+                  <div className={`absolute bottom-0 border-b-4  w-full`} />
+                )}
+              </a>
             </li>
 
             <li
               onClick={() => setClicked("promo")}
               className={`relative py-3 flex items-center select-none cursor-pointer justify-center`}
             >
-              <span>Promo</span>
-              {clicked === "promo" && (
-                <div className={`absolute bottom-0 border-b-4  w-full`} />
-              )}
+              <a href="/#promo">
+                <span>Promo</span>
+                {clicked === "promo" && (
+                  <div className={`absolute bottom-0 border-b-4  w-full`} />
+                )}
+              </a>
             </li>
           </ul>
 
           {/* Desktop Navbar Items */}
-          <div class="hidden sm:flex dropdown dropdown-bottom dropdown-end">
-            <label
-              tabindex="0"
-              onClick={() => {
-                setProduk(true);
-                setClicked("produk");
-              }}
-              className={`relative gap-2 text-white font-poppins py-3  sm:flex items-center select-none cursor-pointer justify-center`}
-            >
-              <span>Produk</span>
-              <span
-                className={`${
-                  produk && clicked === "produk" ? "rotate-180" : ""
-                }`}
+          {/* <div class="hidden sm:flex dropdown dropdown-bottom dropdown-end">
+            {/* <a href="#produk">
+              <label
+                tabindex="0"
+                // onClick={() => {
+                //   setProduk(true);
+                //   setClicked("produk");
+                // }}
+                className={`relative gap-2 text-white font-poppins py-3  sm:flex items-center select-none cursor-pointer justify-center`}
               >
-                <HiChevronDown />
-              </span>
-              <div
+                <span>Produk</span>
+                <span
+                  className={`${
+                    produk && clicked === "produk" ? "rotate-180" : ""
+                  }`}
+                >
+                  <HiChevronDown />
+                </span>
+
+                {/* <div
                 className={`${
                   clicked !== "produk" && "hidden"
                 } absolute bottom-0 border-b-4  w-full`}
-              />
-            </label>
-            <ul
+              /> 
+              </label>
+            </a> */}
+          {/* <ul
               tabindex="0"
-              class="dropdown-content menu bg-none mt-2 rounded-box w-52 bg-white p-2  text-sm text-gray-700"
+              class="dropdown-content menu bg-none mt-2 rounded-box drop-shadow-2xl w-52 bg-white p-2  text-sm text-gray-700"
             >
               <li
                 // onClick={() => setClicked("home")}
@@ -97,8 +117,8 @@ function Navbar() {
               >
                 <span>SANTA FE</span>
               </li>
-            </ul>
-          </div>
+            </ul> 
+          </div> */}
 
           {/* Mobile Navbar Items */}
           <div class="flex sm:hidden dropdown dropdown-bottom dropdown-end">
@@ -116,16 +136,28 @@ function Navbar() {
                 onClick={() => setClicked("home")}
                 className={`block text-center hover:bg-gray-100`}
               >
-                <span>Home</span>
+                <a href="/">
+                  <span>Home</span>
+                </a>
               </li>
 
               <li
                 onClick={() => setClicked("promo")}
                 className={`block text-center hover:bg-gray-100`}
               >
-                <span>Promo</span>
+                <a href="/#promo">
+                  <span>Promo</span>
+                </a>
               </li>
-              <li className="menu-title">
+              <li
+                onClick={() => setClicked("produk")}
+                className={`block text-center hover:bg-gray-100`}
+              >
+                <a href="/#produk">
+                  <span>Product</span>
+                </a>
+              </li>
+              {/* <li className="menu-title">
                 <span>Produk</span>
               </li>
               <li
@@ -152,7 +184,7 @@ function Navbar() {
                 className={`block pl-2 text-[12px] text-center hover:bg-gray-100`}
               >
                 <span>SANTA FE</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

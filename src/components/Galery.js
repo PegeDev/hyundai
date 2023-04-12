@@ -9,7 +9,7 @@ import { Autoplay, Pagination } from "swiper";
 export default function Galery() {
   const [url, setUrl] = useState("");
   return (
-    <div className="w-full h-full flex flex-col items-center mb-36">
+    <div className="w-full flex flex-col items-center ">
       <input type="checkbox" id="modal-4" className="modal-toggle" />
       <div className="modal select-none">
         <label
