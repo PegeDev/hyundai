@@ -89,7 +89,7 @@ function Promo() {
     },
   ];
   return (
-    <div className="w-full scrollbar-hide">
+    <div className="w-full overflow-x-hidden">
       <div className="">
         <Navbar />
       </div>
