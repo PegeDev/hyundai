@@ -38,12 +38,13 @@ function Product() {
         </h1>
         <div className="border-slate-800 w-[70%] h-full border-b-4 rounded-full" />
       </div>
-      <div
-        data-aos="fade-left"
-        className="grid grid-cols-1 sm:grid-cols-3 gap-4"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {product.map((val, i) => (
-          <div key={i} className="border-2 rounded-lg w-full  py-4">
+          <div
+            data-aos="fade-left"
+            key={i}
+            className="border-2 rounded-lg w-full  py-4"
+          >
             <img
               className="object-contain w-[400px] h-[200px] "
               src={val.img}
