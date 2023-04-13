@@ -7,6 +7,8 @@ import Promo from "./pages/Promo";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Stargazer from "./pages/product/Stargazer";
+import SantaFe from "./pages/product/SantaFe";
 function App() {
   useEffect(() => {
     document.title = "Dealer Mobil Hyundai";
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/promo" element={<Promo />} />
+        <Route path="/product/stargazer" element={<Stargazer />} />
+        <Route path="/product/santa-fe" element={<SantaFe />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>

@@ -4,26 +4,32 @@ function Product() {
   const product = [
     {
       title: "STARGAZER",
+      path: "/product/stargazer",
       img: "https://dealermobilhyundai.id/wp-content/uploads/2022/07/Stargazer-Putih_480.webp",
     },
     {
       title: "SANTA FE",
+      path: "/product/santa-fe",
       img: "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/magnetic-force-p6hjl1i7ycvv95or8hgv4y67ogulr1hsa0mwfmbgsu.png",
     },
     {
       title: "PALISADE",
+      path: "/product/palisade",
       img: "https://dealermobilhyundai.id/wp-content/uploads/2021/03/white-cream_9-768x389.png",
     },
     {
       title: "CRETA",
+      path: "/product/creta",
       img: "https://dealermobilhyundai.id/wp-content/uploads/2021/11/su2id-dragon_0-768x576.jpg",
     },
     {
       title: "IONIQ 5",
+      path: "/product/ioniq-5",
       img: "https://dealermobilhyundai.id/wp-content/uploads/2022/04/wtw_27.webp",
     },
     {
       title: "STARIA",
+      path: "/product/staria",
       img: "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Silver-768x312.jpg",
     },
   ];
@@ -55,7 +61,7 @@ function Product() {
                 {val.title}
               </span>
               <button className="bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm max-w-xs font-semibold text-white rounded-sm">
-                Read More
+                <a href={val.path}>Read More</a>
               </button>
             </div>
           </div>

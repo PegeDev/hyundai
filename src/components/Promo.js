@@ -92,8 +92,8 @@ function Promo() {
               alt="promo"
             />
           </div>
-          <div className="overflow-hiddenflex flex-col  text-slate-800 py-8 px-16 space-y-4">
-            <span className="font-poppins font-bold text-[48px]">
+          <div className="overflow-hidden flex flex-col  text-slate-800 py-8 px-16 space-y-4">
+            <span className="font-poppins font-bold text-[48px] leading-none uppercase">
               PROMO Stargazer & Creta{" "}
               <span className="text-red-500">Prime</span>
             </span>
