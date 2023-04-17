@@ -9,9 +9,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Stargazer from "./pages/product/Stargazer";
 import SantaFe from "./pages/product/SantaFe";
+import Palisade from "./pages/product/Palisade";
+import Creta from "./pages/product/Creta";
+import Ioniq5 from "./pages/product/Ioniq-5";
+import Staria from "./pages/product/Staria";
 function App() {
   useEffect(() => {
-    document.title = "Dealer Mobil Hyundai";
     AOS.init({
       duration: 2000,
     });
@@ -23,6 +26,10 @@ function App() {
         <Route path="/promo" element={<Promo />} />
         <Route path="/product/stargazer" element={<Stargazer />} />
         <Route path="/product/santa-fe" element={<SantaFe />} />
+        <Route path="/product/palisade" element={<Palisade />} />
+        <Route path="/product/creta" element={<Creta />} />
+        <Route path="/product/ioniq-5" element={<Ioniq5 />} />
+        <Route path="/product/staria" element={<Staria />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>

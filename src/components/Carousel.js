@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import IoniqImg from "../assets/images/ioniq-5-carousel.webp";
+import SantaImg from "../assets/images/santa-fe-carousel.png";
+import StariaImg from "../assets/images/staria-carousel.jpg";
+import CretaImg from "../assets/images/creta.jpg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,34 +16,34 @@ export default function Carousel() {
   const [show, setShow] = useState(true);
   const sliderArr = [
     {
-      url: "https://dealermobilhyundai.id/wp-content/uploads/2022/04/Home-Banner-1860-x-720-pc.webp",
-      title: "STARGAZER",
-      content:
-        "Commodo consectetur incididunt exercitation reprehenderit sit voluptate minim quis sunt ex laboris fugiat.",
+      url: IoniqImg,
+      title: "IONIQ 5",
+      path: "/product/ioniq-5",
     },
     {
-      url: "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria.jpg",
+      url: SantaImg,
       title: "SANTA FE",
-      content:
-        "Do voluptate proident sunt laborum culpa officia ex exercitation proident in.",
+      path: "/product/santa-fe",
     },
     {
-      url: "https://dealermobilhyundai.id/wp-content/uploads/2022/04/Home-Banner-1860-x-720-pc.webp",
-      title: "PALISADE",
-      content: "Et ad dolore amet cillum.",
+      url: StariaImg,
+      title: "STARIA",
+      path: "/product/staria",
     },
     {
-      url: "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria.jpg",
+      url: CretaImg,
       title: "CRETA",
-      content:
-        "Nostrud eu esse cupidatat sit proident ad aliquip consectetur reprehenderit non adipisicing amet officia.",
+      path: "/product/creta",
     },
   ];
-  console.log({ show });
-
   return (
     <>
       <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-navigation-size": "25px",
+        }}
+        loop={true}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -56,7 +59,9 @@ export default function Carousel() {
         onSlideChangeTransitionEnd={() => {
           setShow(true);
         }}
+        navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
+        className="w-full h-full"
       >
         {sliderArr.map((val, i) => (
           <SwiperSlide key={i}>
@@ -74,11 +79,12 @@ export default function Carousel() {
                 <span className="font-extrabold  font-poppins text-[64px] text-white">
                   {val.title}
                 </span>
-                <span className="font-poppins text-white text-sm sm:text-[20px]">
-                  {val.content}
-                </span>
-                <button className="hover:bg-white hover:text-gray-800 font-semibold transition duration-300 ease-linear border-2 border-white text-white font-poppins mt-4 px-4 py-2 text-sm rounded-lg">
-                  Read More
+
+                <button
+                  type="button"
+                  className="hover:bg-white hover:text-gray-800 font-semibold transition duration-300 ease-linear border-2 border-white text-white font-poppins mt-4 px-4 py-2 text-sm rounded-lg"
+                >
+                  <a href={val.path}>Read More</a>
                 </button>
               </div>
             )}

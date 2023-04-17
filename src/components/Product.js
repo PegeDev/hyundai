@@ -1,36 +1,42 @@
 import React from "react";
+import StargazerImg from "../assets/images/stargazer.webp";
+import SantaImg from "../assets/images/santa-fe.png";
+import PalisadeImg from "../assets/images/palisade.png";
+import CretaImg from "../assets/images/creta-product.jpg";
+import IoniqImg from "../assets/images/ioniq-5.webp";
+import StariaImg from "../assets/images/staria.jpg";
 
 function Product() {
   const product = [
     {
       title: "STARGAZER",
       path: "/product/stargazer",
-      img: "https://dealermobilhyundai.id/wp-content/uploads/2022/07/Stargazer-Putih_480.webp",
+      img: StargazerImg,
     },
     {
       title: "SANTA FE",
       path: "/product/santa-fe",
-      img: "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/magnetic-force-p6hjl1i7ycvv95or8hgv4y67ogulr1hsa0mwfmbgsu.png",
+      img: SantaImg,
     },
     {
       title: "PALISADE",
       path: "/product/palisade",
-      img: "https://dealermobilhyundai.id/wp-content/uploads/2021/03/white-cream_9-768x389.png",
+      img: PalisadeImg,
     },
     {
       title: "CRETA",
       path: "/product/creta",
-      img: "https://dealermobilhyundai.id/wp-content/uploads/2021/11/su2id-dragon_0-768x576.jpg",
+      img: CretaImg,
     },
     {
       title: "IONIQ 5",
       path: "/product/ioniq-5",
-      img: "https://dealermobilhyundai.id/wp-content/uploads/2022/04/wtw_27.webp",
+      img: IoniqImg,
     },
     {
       title: "STARIA",
       path: "/product/staria",
-      img: "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Silver-768x312.jpg",
+      img: StariaImg,
     },
   ];
   return (
@@ -52,6 +58,7 @@ function Product() {
             className="border-2 rounded-lg w-full  py-4"
           >
             <img
+              loading="lazy"
               className="object-contain w-[400px] h-[200px] "
               src={val.img}
               alt={val.title}

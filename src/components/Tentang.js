@@ -33,34 +33,34 @@ function Tentang() {
           data-aos="zoom-in"
           className="mb-8 flex flex-col items-center justify-center"
         >
-          <h1 className="font-poppins font-semibold text-[46px] text-white">
+          <h1 className="font-poppins font-semibold sm:text-[46px] text-[28px] text-white">
             Tentang Sales
           </h1>
-          <div className="border-white w-[70%] h-full border-b-4 rounded-full" />
+          <div className="border-white w-[70%] h-full border-b-2 rounded-full" />
         </div>
-        <div className="hidden sm:flex items-center justify-around w-full h-full container mx-auto">
+        <div className="hidden sm:flex items-center sm:justify-around justify-between sm:w-[70%] w-full px-4 h-full ">
           <div className="flex flex-col">
-            <h1 className="font-poppins font-semibold text-white text-[46px] mb-4 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
+            <h1 className="font-poppins font-semibold text-left text-white sm:text-[46px] text-[24px] mb-4 transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70">
               Cepy Setiyawan
             </h1>
-            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
+            <span className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] ">
               <FaPhone />
               <span>0813-8761-5200</span>
             </span>
-            <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] ">
+            <span className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] ">
               <FaWhatsapp />
               <span>0813-8761-5200</span>
             </span>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
-              className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[24px] "
+              className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaInstagram />
               <span>cepy_hyundai_jabodetabek</span>
             </a>
           </div>
-          <div className="avatar">
-            <div className="w-96 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+          <div className="avatar items-center justify-center">
+            <div className="w-44 sm:w-72 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
               <img
                 className="hover:scale-110 transition ease-linear duration-300"
                 src={Sales}
@@ -71,7 +71,7 @@ function Tentang() {
         </div>
         <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
           <div className="avatar">
-            <div className="w-72 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+            <div className="w-56 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
               <img
                 className="hover:scale-110 transition ease-linear duration-300"
                 src={Sales}
@@ -85,11 +85,11 @@ function Tentang() {
             </h1>
             <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
               <FaPhone />
-              <span>0813-8761-5200</span>
+              <span>0812-9202-0099</span>
             </span>
             <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
               <FaWhatsapp />
-              <span>0813-8761-5200</span>
+              <span>0812-9202-0099</span>
             </span>
             <span className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] ">
               <FaInstagram />
@@ -105,7 +105,7 @@ function Tentang() {
           <div className="w-full h-full border-white border-b-2" />
           <span className="">
             <span className="space-x-1">
-              <span>2022 - hyundai | Design by</span>
+              <span>2023 - Hyundai | Design by</span>
               <span className="font-semibold">PEGA</span>
             </span>
           </span>

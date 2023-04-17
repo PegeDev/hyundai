@@ -3,28 +3,6 @@ import PromoImg from "../assets/images/promo.jpeg";
 function Promo() {
   return (
     <div className="w-full my-8">
-      {/* <div className="rotate-180">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 35.28 2.17"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 .5c3.07.55 9.27-.42 16.14 0 6.88.4 13.75.57 19.14-.11V0H0z"
-            fill="#1E293B"
-          />
-          <path
-            d="M0 1c3.17.8 7.29-.38 10.04-.55 2.75-.17 9.25 1.47 12.67 1.3 3.43-.17 4.65-.84 7.05-.87 2.4-.02 5.52.88 5.52.88V0H0z"
-            opacity=".5"
-            fill="#1E293B"
-          />
-          <path
-            d="M0 1.85c2.56-.83 7.68-.3 11.79-.42 4.1-.12 6.86-.61 9.58-.28 2.73.33 5.61 1.17 8.61 1 3-.19 4.73-.82 5.3-.84V.1H0z"
-            opacity=".5"
-            fill="#1E293B"
-          />
-        </svg>
-      </div> */}
       <input type="checkbox" id="modal-img" className="modal-toggle" />
       <div className="modal select-none">
         <label
@@ -33,6 +11,7 @@ function Promo() {
         >
           <div className=" absolute z-50  w-[70%] h-[80%]">
             <img
+              loading="lazy"
               className="w-full h-full object-contain"
               src={PromoImg}
               alt="promo-img"
@@ -62,6 +41,7 @@ function Promo() {
         >
           <label htmlFor="modal-img" className="w-[400px] h-[360px]">
             <img
+              loading="lazy"
               className="object-cover object-center w-full h-full"
               src={PromoImg}
               alt="promo"
@@ -69,14 +49,14 @@ function Promo() {
           </label>
           <div className="flex flex-col py-8 px-16 space-y-4">
             <span className="font-poppins font-bold text-[48px] uppercase">
-              PROMO Stargazer & Creta{" "}
+              PROMO Stargazer & Creta
               <span className="text-red-500">Prime</span>
             </span>
             <span className="font-poppins ">
-              Dapatkan Penawaran Stargazer & Creta{" "}
+              Dapatkan Penawaran Stargazer & Creta
               <span className="text-red-500">Prime</span> Terbaik Disini
             </span>
-            <button className="w-fit bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
+            <button className="w-fit transition ease-linear duration-300  hover:bg-white hover:text-slate-800  hover:border-2 hover:border-slate-800  border-2 border-slate-800  bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
               <a href="/promo">Read More</a>
             </button>
           </div>
@@ -87,6 +67,7 @@ function Promo() {
         >
           <div className="w-[400px] h-[360px]">
             <img
+              loading="lazy"
               className="object-cover object-center w-full h-full"
               src={PromoImg}
               alt="promo"
@@ -94,41 +75,19 @@ function Promo() {
           </div>
           <div className="overflow-hidden flex flex-col  text-slate-800 py-8 px-16 space-y-4">
             <span className="font-poppins font-bold text-[48px] leading-none uppercase">
-              PROMO Stargazer & Creta{" "}
+              PROMO Stargazer & Creta
               <span className="text-red-500">Prime</span>
             </span>
             <span className="font-poppins ">
-              Dapatkan Penawaran Stargazer & Creta{" "}
+              Dapatkan Penawaran Stargazer & Creta
               <span className="text-red-500">Prime</span> Terbaik Disini
             </span>
-            <button className="w-fit bg-gradient-to-t from-slate-800 to-white/10 bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
+            <button className="w-fit transition ease-linear duration-300  hover:bg-white hover:text-slate-800  hover:border-2 hover:border-slate-800  border-2 border-slate-800  bg-slate-800 shadow-sm select-none px-4 py-2 text-sm font-semibold text-white rounded-sm my-4">
               <a href="/promo">Read More</a>
             </button>
           </div>
         </div>
       </div>
-      {/* <div className="">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 35.28 2.17"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0 .5c3.07.55 9.27-.42 16.14 0 6.88.4 13.75.57 19.14-.11V0H0z"
-              fill="#1E293B"
-            />
-            <path
-              d="M0 1c3.17.8 7.29-.38 10.04-.55 2.75-.17 9.25 1.47 12.67 1.3 3.43-.17 4.65-.84 7.05-.87 2.4-.02 5.52.88 5.52.88V0H0z"
-              opacity=".5"
-              fill="#1E293B"
-            />
-            <path
-              d="M0 1.85c2.56-.83 7.68-.3 11.79-.42 4.1-.12 6.86-.61 9.58-.28 2.73.33 5.61 1.17 8.61 1 3-.19 4.73-.82 5.3-.84V.1H0z"
-              opacity=".5"
-              fill="#1E293B"
-            />
-          </svg>
-        </div> */}
     </div>
   );
 }

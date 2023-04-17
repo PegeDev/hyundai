@@ -19,22 +19,16 @@ export default function Galery() {
           htmlFor="modal-4"
           className="absolute  flex items-center justify-center bg-slate-800/70 w-full h-full cursor-pointer z-40 "
         >
-          <div className="absolute z-50  w-[70%] h-[80%]">
+          <div className="absolute z-50 w-full h-full p-10">
             <iframe
               loading="lazy"
-              className="w-full h-full"
+              className="w-full h-full aspect-video"
               src={url}
               title="Hyundai Palisade"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
               allowFullScreen
             ></iframe>
           </div>
-        </label>
-        <label
-          htmlFor="modal-4 "
-          className="absolute cursor-pointer z-50 top-0 right-0 m-4 transition ease-linear duration-300 rounded-full ring-2 ring-white w-10 h-10 flex items-center justify-center text-2xl hover:bg-white hover:text-slate-800 hover:ring-white text-white text-bold font-poppins"
-        >
-          x
         </label>
       </div>
       <div
@@ -46,9 +40,19 @@ export default function Galery() {
         </h1>
         <div className="border-slate-800 w-[70%] h-full border-b-4 rounded-full" />
       </div>
-      <div data-aos="fade-left" className="w-full mx-auto ">
+      <div data-aos="fade-up" className="w-full mx-auto ">
         <Swiper
-          slidesPerView={3}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
           spaceBetween={false}
           pagination={{
             clickable: true,
