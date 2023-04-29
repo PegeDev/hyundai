@@ -65,7 +65,7 @@ function Stargazer() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src={"/assets/images/stargazer/interior-3.webp"}
+                    src={"/assets/images/stargazer/interior-3.jpg"}
                     alt="interior-3"
                   />
                 </div>
@@ -75,7 +75,7 @@ function Stargazer() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src={"/assets/images/stargazer/interior-4.webp"}
+                    src={"/assets/images/stargazer/interior-4.jpg"}
                     alt="interior-4"
                   />
                 </div>
