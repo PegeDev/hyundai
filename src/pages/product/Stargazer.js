@@ -117,7 +117,7 @@ function Stargazer() {
                 <img
                   loading="lazy"
                   className="block w-full h-full  object-cover object-center"
-                  src={"/assets/images/stargazer/smartsense-3.jpg"}
+                  src={"/assets/images/stargazer/smartsense-3.webp"}
                   alt="SmartSense - 3"
                 />
               </div>
