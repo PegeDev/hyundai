@@ -10,48 +10,32 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import "./santafe.css";
-import { Navigation, Thumbs, Pagination, Autoplay, FreeMode } from "swiper";
+
+import { Navigation, Thumbs, Pagination, Autoplay } from "swiper";
 import { Helmet } from "react-helmet";
 
 function Staria() {
   const [activeThumb1, setActiveThumb1] = useState();
-  const staria = [
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-mud-pfx4s7fi14qaaq38mqd9t815jrkyzvnnfjh1v0q7tc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-sand-pfx4s8dc7yrkmc1vh8rwdpsm55gc7krdro4jcaotn4.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/1-kolom-ivt-pfx4s5jtngnpni5yxpk0o8i8czu8khg6ra62wgt05s.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-mud-pfx4s7fi14qaaq38mqd9t815jrkyzvnnfjh1v0q7tc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-sand-pfx4s8dc7yrkmc1vh8rwdpsm55gc7krdro4jcaotn4.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/1-kolom-ivt-pfx4s5jtngnpni5yxpk0o8i8czu8khg6ra62wgt05s.jpg",
-  ];
   const warna = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Hitam-768x310.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Putih-768x310.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Silver-768x312.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Putih-768x310.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Grey-768x312.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Hitam-768x310.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Silver-768x312.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Putih-768x310.jpg",
+    "/assets/images/staria/Hitam-768x310.jpg",
+    "/assets/images/staria/Putih-768x310.jpg",
+    "/assets/images/staria/Silver-768x312.jpg",
+    "/assets/images/staria/Putih-768x310.jpg",
+    "/assets/images/staria/Grey-768x312.jpg",
+    "/assets/images/staria/Hitam-768x310.jpg",
+    "/assets/images/staria/Silver-768x312.jpg",
+    "/assets/images/staria/Putih-768x310.jpg",
   ];
   const interior = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-1-768x411.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-2-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-3-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-4-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-5-1-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-6-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-7-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-8-768x411.webp",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-9-768x411.jpg",
-  ];
-  const exterior = [
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/1-kolom-17-inch-pfx49l8ko98ucr4qc6o9xf5i01c9jor17ebuoqbx1s.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/1-kolom-LED-Rear-Combination-Lamp-pfx49m6ev3a4od3d6p2whwwylf7mrdurjizc60aivk.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-LED-Headlamp--pfx49n491xbezz2017hj2eof6t2zz2yhvnmtna94pc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-Parametric-Jewel-Pattern-Grille-Hidden-type-LED-DRL-pfx49o238rcpbl0mvpw5mwfvs6yd6s287sab4k7qj4.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/1-kolom-LED-Rear-Combination-Lamp-pfx49m6ev3a4od3d6p2whwwylf7mrdurjizc60aivk.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/2-kolom-LED-Headlamp--pfx49n491xbezz2017hj2eof6t2zz2yhvnmtna94pc.jpg",
+    "/assets/images/staria/gallery-1-768x411.jpg",
+    "/assets/images/staria/gallery-2-768x411.webp",
+    "/assets/images/staria/gallery-3-768x411.webp",
+    "/assets/images/staria/gallery-4-768x411.webp",
+    "/assets/images/staria/gallery-5-1-768x411.webp",
+    "/assets/images/staria/gallery-6-768x411.webp",
+    "/assets/images/staria/gallery-7-768x411.webp",
+    "/assets/images/staria/gallery-8-768x411.webp",
+    "/assets/images/staria/gallery-9-768x411.jpg",
   ];
   return (
     <>
@@ -68,21 +52,16 @@ function Staria() {
           name="og:description"
           content="Dapatkan Penawaran Terbaik Disini"
         />
-        <meta
-          name="og:image"
-          content={
-            "https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria.jpg"
-          }
-        />
+        <meta name="og:image" content={"/assets/images/staria/Staria.jpg"} />
       </Helmet>
       <div className="w-full overflow-x-hidden no-scrollbar">
-        <div className="">
+        <div>
           <Navbar />
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="w-full sm:h-[500px] h-[250px] overflow-hidden">
+          <div className="w-full sm:h-[31.25rem] h-[15.625rem] overflow-hidden">
             <img
-              src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria.jpg"
+              src="/assets/images/staria/Staria.jpg"
               alt="banner"
               className="object-cover w-full h-full object-center"
             />
@@ -91,7 +70,7 @@ function Staria() {
         <div className="container flex flex-col items-center justify-center mx-auto my-8 space-y-16 ">
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Hyundai is in progress to achieve carbon neutrality by 2045.
               </h2>
             </div>
@@ -109,10 +88,10 @@ function Staria() {
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Larger than life.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic text-center w-full">
                 Bagi Anda yang selalu membuka ruang demi kesuksesan, bersiaplah
                 menjalani pencapaian demi pencapaian bersama STARIA. STARIA
                 merevolusi fungsi ruang berkendara untuk berpegian dalam
@@ -124,7 +103,7 @@ function Staria() {
             <div className="w-full h-full relative flex items-center justify-center">
               <img
                 className="w-full h-full object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria-Highlight-Larger-Than-Life-pc-1024x549.webp"
+                src="/assets/images/staria/Staria-Highlight-Larger-Than-Life-pc-1024x549.webp"
                 alt=""
               />
               {/* <div className="bg-slate-400/20 absolute w-full h-full " /> */}
@@ -132,10 +111,10 @@ function Staria() {
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Launch into a new dimension.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic text-center w-full">
                 Mengadopsi gaya on-curve design, STARIA mengaplikasikan inovasi
                 terbarunya pada rancang bentuk kendaraan MPV. Siluet
                 futuristiknya membungkus berbagai fitur teknologi terdepan untuk
@@ -147,7 +126,7 @@ function Staria() {
             <div className="w-full h-full relative flex items-center justify-center">
               <img
                 className="w-full h-full object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria-Highlight-Launch-Into-New-Dimension-pc-1-1024x549.webp"
+                src="/assets/images/staria/Staria-Highlight-Launch-Into-New-Dimension-pc-1-1024x549.webp"
                 alt=""
               />
               {/* <div className="bg-slate-400/20 absolute w-full h-full " /> */}
@@ -155,18 +134,17 @@ function Staria() {
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-8">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Galery
               </h2>
             </div>
             <div className="select-none">
               <Swiper
                 loop={true}
-                slidesPerView={4}
                 style={{
-                  "--swiper-navigation-color": "rgb(255 255 255)",
-                  "--swiper-pagination-color": "rgb(255 255 255)",
-                  "--swiper-navigation-size": "25px",
+                  "--swiper-navigation-color": "#FFFFFF",
+                  "--swiper-pagination-color": "#FFFFFF",
+                  "--swiper-navigation-size": "1.6rem",
                 }}
                 pagination={{
                   clickable: true,
@@ -175,6 +153,18 @@ function Staria() {
                   delay: 3500,
                   disableOnInteraction: false,
                 }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                }}
+                slidesPerView={1}
+                spaceBetween={10}
                 navigation={true}
                 modules={[Autoplay, Navigation, Pagination]}
                 className="w-full h-full"
@@ -194,73 +184,87 @@ function Staria() {
           </div>
           <div className="sm:w-[80%] w-full px-4 h-full ">
             <div className="w-full h-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Warna
               </h2>
             </div>
             <div className="select-none space-y-2 w-full h-full">
-              <Swiper
-                loop={true}
-                style={{
-                  "--swiper-navigation-color": "rgb(255 255 255)",
-                  "--swiper-pagination-color": "rgb(255 255 255)",
-                  "--swiper-navigation-size": "25px",
-                }}
-                spaceBetween={10}
-                navigation={true}
-                autoplay={{
-                  delay: 4500,
-                  disableOnInteraction: false,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-                watchSlidesProgress={true}
-                thumbs={{
-                  swiper:
-                    activeThumb1 && !activeThumb1.destroyed
-                      ? activeThumb1
-                      : null,
-                }}
-                modules={[Autoplay, Navigation, Thumbs, Pagination]}
-                className="slider-warna-1"
-              >
-                {warna.map((val, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      className={"w-full h-full object-contain object-center"}
-                      alt={`warna-${index}`}
-                      src={val}
-                    />
-                    {/* <div className="bg-slate-400/20 absolute w-full h-full " /> */}
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              <Swiper
-                onSwiper={setActiveThumb1}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={4}
-                watchSlidesProgress={true}
-                modules={[Navigation, Thumbs]}
-                className="slider-warna-2"
-              >
-                {warna.map((val, index) => (
-                  <SwiperSlide key={index} className="w-full h-full relative">
-                    <img
-                      className={"w-full h-full object-contain object-center"}
-                      alt={`warna-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+              <div className="w-full h-[10rem] sm:h-full ">
+                <Swiper
+                  loop={true}
+                  style={{
+                    "--swiper-navigation-color": "#FFFFFF",
+                    "--swiper-pagination-color": "#FFFFFF",
+                    "--swiper-navigation-size": "1.6rem",
+                  }}
+                  spaceBetween={10}
+                  navigation={true}
+                  autoplay={{
+                    delay: 4500,
+                    disableOnInteraction: false,
+                  }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  watchSlidesProgress={true}
+                  thumbs={{
+                    swiper:
+                      activeThumb1 && !activeThumb1.destroyed
+                        ? activeThumb1
+                        : null,
+                  }}
+                  modules={[Autoplay, Navigation, Thumbs, Pagination]}
+                  className="w-full h-full"
+                >
+                  {warna.map((val, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        className={"w-full h-full object-contain object-center"}
+                        alt={`warna-${index}`}
+                        src={val}
+                      />
+                      {/* <div className="bg-slate-400/20 absolute w-full h-full " /> */}
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+              <div className="w-full h-full">
+                <Swiper
+                  onSwiper={setActiveThumb1}
+                  loop={true}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 10,
+                    },
+                  }}
+                  slidesPerView={3}
+                  spaceBetween={10}
+                  watchSlidesProgress={true}
+                  modules={[Navigation, Thumbs]}
+                  className="w-full h-full"
+                >
+                  {warna.map((val, index) => (
+                    <SwiperSlide key={index} className="w-full h-full relative">
+                      <img
+                        className={"w-full h-full object-contain object-center"}
+                        alt={`warna-${index}`}
+                        src={val}
+                      />
+                      <div className="bg-slate-400/20 absolute w-full h-full" />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="w-full flex flex-col my-8 items-center justify-center">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem]">
                 Exterior
               </h2>
             </div>
@@ -268,7 +272,7 @@ function Staria() {
               <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-5-1-1024x549.webp"
+                  src="/assets/images/staria/gallery-5-1-1024x549.webp"
                   alt=""
                 />
                 {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -284,7 +288,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/tinted-brass.webp"
+                    src="/assets/images/staria/tinted-brass.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -299,7 +303,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center ">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/full-led-headlamp.webp"
+                    src="/assets/images/staria/full-led-headlamp.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -315,7 +319,7 @@ function Staria() {
               <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/samping-akordeon-pc-1024x309.webp"
+                  src="/assets/images/staria/samping-akordeon-pc-1024x309.webp"
                   alt=""
                 />
                 {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -326,7 +330,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/first-laminated-glass.webp"
+                    src="/assets/images/staria/first-laminated-glass.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -341,7 +345,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center ">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/3-kolom-samping.webp"
+                    src="/assets/images/staria/3-kolom-samping.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -356,7 +360,7 @@ function Staria() {
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="w-full flex flex-col my-8 items-center justify-center">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem]">
                 Interior
               </h2>
             </div>
@@ -365,7 +369,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria-Interior-9-Seat-Black-pc-1024x549.webp"
+                    src="/assets/images/staria/Staria-Interior-9-Seat-Black-pc-1024x549.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -380,7 +384,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center ">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria-Interior-7-Seat-Black-pc-1024x549.webp"
+                    src="/assets/images/staria/Staria-Interior-7-Seat-Black-pc-1024x549.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -393,14 +397,14 @@ function Staria() {
               </div>
             </div>
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins text-center font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins text-center font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Nikmati kenyamanan setara First Class
               </h2>
             </div>
             <div className="w-full h-full relative flex items-center justify-center">
               <img
                 className="w-full h-full object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-1-1-1024x549.jpg"
+                src="/assets/images/staria/gallery-1-1-1024x549.jpg"
                 alt=""
               />
               {/* <div className="bg-slate-400/20 absolute w-full h-full " /> */}
@@ -410,7 +414,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/7-seat-heat-seat.webp"
+                    src="/assets/images/staria/7-seat-heat-seat.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -425,7 +429,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center ">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/7-seat-ventilated.jpg"
+                    src="/assets/images/staria/7-seat-ventilated.jpg"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -442,16 +446,16 @@ function Staria() {
             <div className="w-full h-full relative flex items-center justify-center">
               <img
                 className="w-full h-full object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/Staria-Interior-Seat-Button-pc-1024x549.jpg"
+                src="/assets/images/staria/Staria-Interior-Seat-Button-pc-1024x549.jpg"
                 alt=""
               />
               {/* <div className="bg-slate-400/20 absolute w-full h-full " /> */}
             </div>
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] text-center w-full leading-8">
                 Powerful performance.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic text-center w-full">
                 Dengan 8-speed Automatic Shift-by-wire, STARIA menghasilkan
                 performa yang mantap, lebih bertenaga dan efisien. Juga
                 dilengkapi Drive Mode untuk pilihan performa yang paling sesuai
@@ -470,7 +474,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/crrdi-1024x549.webp"
+                    src="/assets/images/staria/crrdi-1024x549.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -480,7 +484,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center ">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/gallery-8-1-1024x549.webp"
+                    src="/assets/images/staria/gallery-8-1-1024x549.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -492,7 +496,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center space-y-2 justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/8-speed-1024x549.webp"
+                    src="/assets/images/staria/8-speed-1024x549.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -502,7 +506,7 @@ function Staria() {
                 <div className="w-full relative flex flex-col items-center ">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/08/eco-1024x549.webp"
+                    src="/assets/images/staria/eco-1024x549.webp"
                     alt=""
                   />
                   {/* <div className="bg-slate-400/20 absolute w-full h-full" /> */}
@@ -511,7 +515,7 @@ function Staria() {
             </div>
           </div>
         </div>
-        <div className="">
+        <div>
           <Tentang />
         </div>
       </div>

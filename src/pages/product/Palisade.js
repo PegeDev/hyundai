@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import "./santafe.css";
 import { Navigation, Thumbs, Pagination, Autoplay } from "swiper";
 import { Helmet } from "react-helmet";
 
@@ -18,22 +17,16 @@ function Palisade() {
   const [activeThumb1, setActiveThumb1] = useState();
   const [activeThumb2, setActiveThumb2] = useState();
   const palisade = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/001-pc-1024x549.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/002-pc-1024x549.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/003-pc-1024x549.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/004-pc.jpg",
+    "/assets/images/palisade/001-pc-1024x549.jpg",
+    "/assets/images/palisade/002-pc-1024x549.jpg",
+    "/assets/images/palisade/003-pc-1024x549.jpg",
+    "/assets/images/palisade/004-pc.jpg",
   ];
   const warna = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/moonlight-cloud_9.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/steel-graphite_9.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/timeless-black_9.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/03/white-cream_9.png",
-  ];
-  const interior = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-3rd-row-folded-and-2nd-row-folded-40-pc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-3rd-row-folded-and-2nd-row-folded-60-pc.pg_.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-3rd-row-folded-pc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-7-seats-pc.jpg",
+    "/assets/images/palisade/moonlight-cloud_9.png",
+    "/assets/images/palisade/steel-graphite_9.png",
+    "/assets/images/palisade/timeless-black_9.png",
+    "/assets/images/palisade/white-cream_9.png",
   ];
   return (
     <>
@@ -52,9 +45,7 @@ function Palisade() {
         />
         <meta
           name="og:image"
-          content={
-            "https://dealermobilhyundai.id/wp-content/uploads/2021/03/palisade-banner2-pc.jpg"
-          }
+          content={"/assets/images/palisade/palisade-banner2-pc.jpg"}
         />
       </Helmet>
       <div className="w-full overflow-x-hidden no-scrollbar">
@@ -62,10 +53,10 @@ function Palisade() {
           <Navbar />
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="w-full h-[500px] overflow-hidden">
+          <div className="w-full h-[30rem] overflow-hidden">
             <img
               loading="lazy"
-              src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/palisade-banner2-pc.jpg"
+              src="/assets/images/palisade/palisade-banner2-pc.jpg"
               alt="banner"
               className="object-cover w-full h-full object-center"
             />
@@ -73,11 +64,11 @@ function Palisade() {
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto my-8 space-y-16 ">
           <div className="sm:w-[80%] w-full px-4 space-y-4">
-            <div className="w-full flex flex-col items-center justify-center ">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+            <div className="w-full flex flex-col items-center justify-center">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                 Selalu Mengagumkan.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[14px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 Eksplorasi di berbagai medan dapat menuntun pada penjelajahan
                 yang menakjubkan. Bagi mereka yang memiliki jiwa petualang dan
                 ingin menjelajah, Hyundai mempersembahkan PALISADE terbaru,
@@ -88,7 +79,7 @@ function Palisade() {
               <img
                 loading="lazy"
                 className="w-full h-full object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/001-pc-1024x549.jpg"
+                src="/assets/images/palisade/001-pc-1024x549.jpg"
                 alt=""
               />
             </div>
@@ -97,10 +88,10 @@ function Palisade() {
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
               <div className="w-full relative flex items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     Kenang masa itu
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[14px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     Hari besar telah tiba, ajak keluarga maupun kerabat, nikmati
                     perjalanan dengan PALISADE menjelajah tempat-tempat spesial.
                     Kenangan indah tercipta kala itu, PALISADE yang membantu
@@ -114,7 +105,7 @@ function Palisade() {
                 <img
                   loading="lazy"
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/002-pc-1024x549.jpg"
+                  src="/assets/images/palisade/002-pc-1024x549.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -125,17 +116,17 @@ function Palisade() {
                 <img
                   loading="lazy"
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/003-pc-1024x549.jpg"
+                  src="/assets/images/palisade/003-pc-1024x549.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
               </div>
               <div className="w-full relative flex items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     Awal yang cerdas.
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[14px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     PALISADE sarat dengan fitur pintar teranyar seperti power
                     tailgate yang tidak hanya dapat terbuka dan tertutup secara
                     otomatis namun juga dapat diatur kecepatannya. Posisi
@@ -148,149 +139,183 @@ function Palisade() {
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-8">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                 Galery
               </h2>
             </div>
-            <div className="">
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "rgb(51 65 85)",
-                  "--swiper-pagination-color": "rgb(51 65 85)",
-                  "--swiper-navigation-size": "25px",
-                }}
-                spaceBetween={10}
-                navigation={true}
-                autoplay={{
-                  delay: 5000,
-                  disableOnInteraction: false,
-                }}
-                thumbs={{
-                  swiper:
-                    activeThumb1 && !activeThumb1.destroyed
-                      ? activeThumb1
-                      : null,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[Autoplay, Navigation, Thumbs, Pagination]}
-                className="slider2"
-              >
-                {palisade.map((val, index) => (
-                  <SwiperSlide key={index} className="overflow-hidden relative">
-                    <img
-                      loading="lazy"
-                      className="w-full object-contain object-center"
-                      alt={`palisade-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full " />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              <Swiper
-                onSwiper={setActiveThumb1}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={4}
-                modules={[Autoplay, Navigation, Thumbs, Pagination]}
-                className="slider"
-              >
-                {palisade.map((val, index) => (
-                  <SwiperSlide
-                    key={index}
-                    className="select-none overflow-hidden relative my-2"
-                  >
-                    <img
-                      loading="lazy"
-                      className="w-full object-cover object-center"
-                      alt={`palisade-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className="w-full h-full my-8 space-y-2">
+              <div className="w-full  h-[10rem] sm:h-full ">
+                <Swiper
+                  style={{
+                    "--swiper-navigation-color": "#FFFFFF",
+                    "--swiper-pagination-color": "#FFFFFF",
+                    "--swiper-navigation-size": "1.6rem",
+                  }}
+                  spaceBetween={10}
+                  navigation={true}
+                  autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                  }}
+                  thumbs={{
+                    swiper:
+                      activeThumb1 && !activeThumb1.destroyed
+                        ? activeThumb1
+                        : null,
+                  }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Autoplay, Navigation, Thumbs, Pagination]}
+                  className="w-full h-full"
+                >
+                  {palisade.map((val, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="overflow-hidden relative"
+                    >
+                      <img
+                        loading="lazy"
+                        className="w-full object-contain object-center"
+                        alt={`palisade-${index}`}
+                        src={val}
+                      />
+                      <div className="bg-slate-400/20 absolute w-full h-full " />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+              <div className="w-full h-full py-2">
+                <Swiper
+                  onSwiper={setActiveThumb1}
+                  loop={true}
+                  modules={[Autoplay, Navigation, Thumbs, Pagination]}
+                  className="w-full h-full"
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 10,
+                    },
+                  }}
+                  slidesPerView={3}
+                  spaceBetween={10}
+                >
+                  {palisade.map((val, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="select-none overflow-hidden relative my-2"
+                    >
+                      <img
+                        loading="lazy"
+                        className="w-full object-cover object-center"
+                        alt={`palisade-${index}`}
+                        src={val}
+                      />
+                      <div className="bg-slate-400/20 absolute w-full h-full" />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-8">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem]">
                 Warna
               </h2>
             </div>
-            <div className="">
-              <Swiper
-                loop={true}
-                style={{
-                  "--swiper-navigation-color": "rgb(51 65 85)",
-                  "--swiper-pagination-color": "rgb(51 65 85)",
-                  "--swiper-navigation-size": "25px",
-                }}
-                spaceBetween={10}
-                navigation={true}
-                autoplay={{
-                  delay: 4500,
-                  disableOnInteraction: false,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-                thumbs={{
-                  swiper:
-                    activeThumb2 && !activeThumb2.destroyed
-                      ? activeThumb2
-                      : null,
-                }}
-                modules={[Autoplay, Navigation, Thumbs, Pagination]}
-                className="slider2 select-none"
-              >
-                {warna.map((val, index) => (
-                  <SwiperSlide key={index} className="overflow-hidden relative">
-                    <img
-                      loading="lazy"
-                      className="w-full object-contain object-center"
-                      alt={`warna-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full " />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              <Swiper
-                onSwiper={setActiveThumb2}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={4}
-                modules={[Autoplay, Navigation, Thumbs, Pagination]}
-                className="slider "
-              >
-                {warna.map((val, index) => (
-                  <SwiperSlide
-                    key={index}
-                    className=" overflow-hidden relative my-2"
-                  >
-                    <img
-                      loading="lazy"
-                      className="w-full object-cover object-center"
-                      alt={`warna-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div className="w-full h-full my-8 space-y-2">
+              <div className="w-full  h-[10rem] sm:h-full ">
+                <Swiper
+                  loop={true}
+                  style={{
+                    "--swiper-navigation-color": "#FFFFFF",
+                    "--swiper-pagination-color": "#FFFFFF",
+                    "--swiper-navigation-size": "1.6rem",
+                  }}
+                  spaceBetween={10}
+                  navigation={true}
+                  autoplay={{
+                    delay: 4500,
+                    disableOnInteraction: false,
+                  }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  thumbs={{
+                    swiper:
+                      activeThumb2 && !activeThumb2.destroyed
+                        ? activeThumb2
+                        : null,
+                  }}
+                  modules={[Autoplay, Navigation, Thumbs, Pagination]}
+                  lassName="w-full h-full"
+                >
+                  {warna.map((val, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="overflow-hidden relative"
+                    >
+                      <img
+                        loading="lazy"
+                        className="w-full object-contain object-center"
+                        alt={`warna-${index}`}
+                        src={val}
+                      />
+                      <div className="bg-slate-400/20 absolute w-full h-full " />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+              <div className="w-full h-full ">
+                <Swiper
+                  onSwiper={setActiveThumb2}
+                  loop={true}
+                  modules={[Autoplay, Navigation, Thumbs, Pagination]}
+                  className="w-full h-full"
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 10,
+                    },
+                  }}
+                  slidesPerView={3}
+                  spaceBetween={10}
+                >
+                  {warna.map((val, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className=" overflow-hidden relative my-2"
+                    >
+                      <img
+                        loading="lazy"
+                        className="w-full object-cover object-center"
+                        alt={`warna-${index}`}
+                        src={val}
+                      />
+                      <div className="bg-slate-400/20 absolute w-full h-full" />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
               <div className="w-full relative flex items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     MUD Mode
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[14px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     Memastikan traksi maksimum bahkan di jalan yang berlumpur
                     sekalipun, berkat unit kopling baru yang menyediakan
                     distribusi torsi yang dikontrol secara elektronik di antara
@@ -304,7 +329,7 @@ function Palisade() {
                 <img
                   loading="lazy"
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/03-mud-pc.jpg"
+                  src="/assets/images/palisade/03-mud-pc.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -315,17 +340,17 @@ function Palisade() {
                 <img
                   loading="lazy"
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/04-sand-pc.jpg"
+                  src="/assets/images/palisade/04-sand-pc.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
               </div>
               <div className="w-full relative flex items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     Sand Mode
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[14px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     Pengontrol pintar secara otomatis menyesuaikan rasio
                     distribusi daya antara as roda depan/belakang, dan secara
                     otomatis akan mengalokasikan jumlah torsi dan/atau daya
@@ -342,12 +367,12 @@ function Palisade() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/06-rhd-sign-pc.jpg"
+                    src="/assets/images/palisade/06-rhd-sign-pc.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
                 </div>
-                <div className="font-poppins font-medium text-slate-700">
+                <div className="font-poppins font-medium text-slate-700 w-full text-center">
                   <h2>Electronic All-Wheel Drive System</h2>
                 </div>
               </div>
@@ -356,12 +381,12 @@ function Palisade() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/05-auto-transmission-pc.jpg"
+                    src="/assets/images/palisade/05-auto-transmission-pc.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
                 </div>
-                <div className="font-poppins font-medium text-slate-700">
+                <div className="font-poppins font-medium text-slate-700 w-full text-center">
                   <h2>8-speed shift-by-wire automatic transmission</h2>
                 </div>
               </div>
@@ -369,10 +394,10 @@ function Palisade() {
           </div>
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="w-full flex flex-col items-center justify-center ">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                 Perlindungan tertinggi.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 PALISADE selalu memprioritaskan keselamatan pengemudi dan
                 penumpang, Dilengkapi enam sistem airbag dan sistem keamanan
                 aktif dengan teknologi keselamatan berkendara yang cerdas.
@@ -382,15 +407,15 @@ function Palisade() {
               <img
                 loading="lazy"
                 className="w-full h-full  object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/01-LDW-pc-1024x549.jpg"
+                src="/assets/images/palisade/01-LDW-pc-1024x549.jpg"
                 alt=""
               />
             </div>
             <div className="w-full flex flex-col items-center justify-center ">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                 Blind-Spot Collision Warning (BCW)
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 Sensor radar di bumper belakang berfungsi untuk memperingatkan
                 pengemudi ketika ada kendaraan yang mendekat dalam area titik
                 buta.
@@ -404,16 +429,16 @@ function Palisade() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/03-sea-pc.jpg"
+                    src="/assets/images/palisade/03-sea-pc.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
                 </div>
                 <div className="w-full flex flex-col  justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     Safe Exit Assist (First in class)
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[16px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     PALISADE selalu memprioritaskan keselamatan pengemudi dan
                     penumpang, Dilengkapi enam sistem airbag dan sistem keamanan
                     aktif dengan teknologi keselamatan berkendara yang cerdas.
@@ -425,16 +450,16 @@ function Palisade() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/04-airbags-pc.jpg"
+                    src="/assets/images/palisade/04-airbags-pc.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
                 </div>
                 <div className="w-full flex flex-col  justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     6-Airbag system
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[16px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     PALISADE menawarkan 6 airbag: pengemudi dan penumpang depan
                     mendapatkan sepasang airbag depan plus sepasang airbag
                     samping untuk melindungi area dada dan panggul. Terpadat
@@ -451,16 +476,16 @@ function Palisade() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/05-park-assit-sign-pc.jpg"
+                    src="/assets/images/palisade/05-park-assit-sign-pc.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
                 </div>
                 <div className="w-full flex flex-col  justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700 text-[32px]">
+                  <h2 className="font-poppins font-semibold text-slate-700 text-[2rem] w-full text-center">
                     Front / rear parking distance warning*
                   </h2>
-                  <p className="font-poppins  text-slate-700 text-[16px] italic">
+                  <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                     *Hanya di Signature & Signature AWD
                   </p>
                 </div>
@@ -470,16 +495,16 @@ function Palisade() {
                   <img
                     loading="lazy"
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/03/02-rcca-pc.jpg"
+                    src="/assets/images/palisade/02-rcca-pc.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
                 </div>
                 <div className="w-full flex flex-col  justify-center">
-                  <h2 className="font-poppins font-semibold text-slate-700  text-[28px]">
+                  <h2 className="font-poppins font-semibold text-slate-700  text-[2rem] w-full text-center">
                     Rear Cross-Traffic Collision Warning (RCCW)
                   </h2>
-                  <p className="font-poppins   text-slate-700 text-[16px] italic">
+                  <p className="font-poppins   text-slate-700 text-[1rem] italic w-full text-center">
                     Sensor radar di bumper belakang memonitor lalu lintas yang
                     mendekat dari sisi kiri dan kanan kendaraan ketika berjalan
                     mundur, fitur peringatan RCCW dapat diaktifkan jika
@@ -492,7 +517,7 @@ function Palisade() {
           <div className="sm:w-[80%] w-full px-4 space-y-4">
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
               <div className="w-full relative flex flex-col space-y-2 items-center ">
-                <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                <h2 className="font-poppins font-semibold text-slate-700 text-[2rem]">
                   Specification
                 </h2>
                 <div className="flex flex-col w-full items-center  divide-y divide-slate-700">
@@ -754,7 +779,7 @@ function Palisade() {
                 </div>
               </div>
               <div className="w-full relative flex flex-col space-y-2 items-center">
-                <h2 className="font-poppins font-semibold text-slate-700 text-[28px]">
+                <h2 className="font-poppins font-semibold text-slate-700 text-[2rem]">
                   Harga Hyundai Palisade
                 </h2>
                 <div className="flex flex-col ">

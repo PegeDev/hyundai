@@ -10,28 +10,27 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-// import "./santafe.css";
+
 import { Navigation, Thumbs, Pagination, Autoplay } from "swiper";
 import { Helmet } from "react-helmet";
 
 function SantaFe() {
   const [activeThumb, setActiveThumb] = useState();
-  console.log(activeThumb);
   const santafe = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/lagoon-blue-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/phantom-black-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/glacier-white-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/magnetic-force-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/typhoon-silver-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/lagoon-blue-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/phantom-black-768x291.png",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/glacier-white-768x291.png",
+    "/assets/images/santa-fe/lagoon-blue-768x291.png",
+    "/assets/images/santa-fe/phantom-black-768x291.png",
+    "/assets/images/santa-fe/glacier-white-768x291.png",
+    "/assets/images/santa-fe/magnetic-force-768x291.png",
+    "/assets/images/santa-fe/typhoon-silver-768x291.png",
+    "/assets/images/santa-fe/lagoon-blue-768x291.png",
+    "/assets/images/santa-fe/phantom-black-768x291.png",
+    "/assets/images/santa-fe/glacier-white-768x291.png",
   ];
   const interior = [
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-3rd-row-folded-and-2nd-row-folded-40-pc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-3rd-row-folded-and-2nd-row-folded-60-pc.pg_.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-3rd-row-folded-pc.jpg",
-    "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-interior-7-seats-pc.jpg",
+    "/assets/images/santa-fe/design-interior-3rd-row-folded-and-2nd-row-folded-40-pc.jpg",
+    "/assets/images/santa-fe/design-interior-3rd-row-folded-and-2nd-row-folded-60-pc.pg_.jpg",
+    "/assets/images/santa-fe/design-interior-3rd-row-folded-pc.jpg",
+    "/assets/images/santa-fe/design-interior-7-seats-pc.jpg",
   ];
   return (
     <>
@@ -50,9 +49,7 @@ function SantaFe() {
         />
         <meta
           name="og:image"
-          content={
-            "https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-cover.png"
-          }
+          content={"/assets/images/santa-fe/design-cover.png"}
         />
       </Helmet>
       <div className="w-full overflow-x-hidden no-scrollbar">
@@ -60,9 +57,9 @@ function SantaFe() {
           <Navbar />
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="w-full h-[500px] overflow-hidden">
+          <div className="w-full h-[30rem] overflow-hidden">
             <img
-              src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-cover.png"
+              src="/assets/images/santa-fe/design-cover.png"
               alt="banner"
               className="object-cover w-full h-full object-bottom"
             />
@@ -71,10 +68,10 @@ function SantaFe() {
         <div className="container flex flex-col items-center justify-center mx-auto my-8 space-y-16 ">
           <div className="sm:w-[80%] w-full flex flex-col items-center justify-center px-4">
             <div className="w-full flex flex-col items-center justify-center">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold leading-10 text-slate-700 text-[2rem] w-full text-center">
                 New Body Platform
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 A new, next-generation platform has been applied to the Santa
                 Fe, maximizing vehicle stability on top of larger interior
                 space. The new platform also brings with it significant
@@ -85,17 +82,17 @@ function SantaFe() {
             <div className="w-full h-full">
               <img
                 className="object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/new-body-platform.png"
+                src="/assets/images/santa-fe/new-body-platform.png"
                 alt=""
               />
             </div>
           </div>
           <div className="sm:w-[80%] w-full flex flex-col items-center justify-center px-4">
-            <div className="w-full flex flex-col items-center justify-center space-y-8">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+            <div className="w-full grid grid-cols-1 gap-4">
+              <h2 className="font-poppins font-semibold leading-10 text-slate-700 text-[2rem] w-full text-center">
                 Wise and Wide Care
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 No matter what kind of day lies ahead of you, Santa Fe will
                 always give you a great start. Whether you face your usual
                 routine or a special occasion to surprise your family, Santa Fe
@@ -104,62 +101,70 @@ function SantaFe() {
               </p>
             </div>
             <div className="w-full h-full my-8 space-y-2">
-              <Swiper
-                loop={true}
-                style={{
-                  "--swiper-navigation-color": "rgb(51 65 85)",
-                  "--swiper-pagination-color": "rgb(51 65 85)",
-                  "--swiper-navigation-size": "25px",
-                }}
-                spaceBetween={10}
-                navigation={true}
-                thumbs={{
-                  swiper:
-                    activeThumb && !activeThumb.destroyed ? activeThumb : null,
-                }}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-                modules={[Autoplay, Navigation, Thumbs]}
-                className="slider2"
-              >
-                {santafe.map((val, index) => (
-                  <SwiperSlide
-                    key={index}
-                    className="select-none overflow-hidden relative"
-                  >
-                    <img
-                      className="w-full object-cover object-center"
-                      alt={`santa-fe-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full " />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              <Swiper
-                onSwiper={setActiveThumb}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={4}
-                modules={[Navigation, Thumbs]}
-                className="slider"
-              >
-                {santafe.map((val, index) => (
-                  <SwiperSlide
-                    key={index}
-                    className="select-none overflow-hidden relative"
-                  >
-                    <img
-                      className="w-full object-cover object-center"
-                      alt={`santa-fe-${index}`}
-                      src={val}
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full " />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+              <div className="w-full h-[18.75rem] sm:h-full">
+                <Swiper
+                  loop={true}
+                  style={{
+                    "--swiper-navigation-color": "#FFFFFF",
+                    "--swiper-pagination-color": "#FFFFFF",
+                    "--swiper-navigation-size": "1.6rem",
+                  }}
+                  spaceBetween={10}
+                  navigation={true}
+                  thumbs={{
+                    swiper:
+                      activeThumb && !activeThumb.destroyed
+                        ? activeThumb
+                        : null,
+                  }}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  modules={[Autoplay, Navigation, Thumbs]}
+                  className="w-full h-full"
+                >
+                  {santafe.map((val, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="select-none overflow-hidden relative"
+                    >
+                      <img className="" alt={`santa-fe-${index}`} src={val} />
+                      <div className="bg-slate-400/20 absolute w-full h-full " />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>{" "}
+              </div>
+              <div className="w-full h-full ">
+                <Swiper
+                  onSwiper={setActiveThumb}
+                  loop={true}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 20,
+                    },
+                  }}
+                  slidesPerView={3}
+                  spaceBetween={10}
+                  modules={[Navigation, Thumbs]}
+                  className=""
+                >
+                  {santafe.map((val, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="select-none overflow-hidden relative"
+                    >
+                      <img className="" alt={`santa-fe-${index}`} src={val} />
+                      <div className="bg-slate-400/20 absolute w-full h-full " />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
           <div className="sm:w-[80%] w-full flex flex-col items-center justify-center px-4">
@@ -169,7 +174,7 @@ function SantaFe() {
                   <div className="w-full relative flex items-center justify-center">
                     <img
                       className="block w-full h-full  object-cover object-center"
-                      src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/new-cascading-grill-connecting-with-the-headlights.jpg"
+                      src="/assets/images/santa-fe/new-cascading-grill-connecting-with-the-headlights.jpg"
                       alt=""
                     />
                     <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -177,25 +182,7 @@ function SantaFe() {
                   <div className="w-full relative flex items-center justify-center">
                     <img
                       className="block w-full h-full  object-cover object-center"
-                      src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/t-shape-headlights-provide-a-unique-light-signature.jpg"
-                      alt=""
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full" />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
-                  <div className="w-full relative flex items-center justify-center">
-                    <img
-                      className="block w-full h-full  object-cover object-center"
-                      src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/rear-bumper-integration.png"
-                      alt=""
-                    />
-                    <div className="bg-slate-400/20 absolute w-full h-full" />
-                  </div>
-                  <div className="w-full relative flex items-center justify-center">
-                    <img
-                      className="block w-full h-full  object-cover object-center"
-                      src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/rear-combination-light.jpg"
+                      src="/assets/images/santa-fe/t-shape-headlights-provide-a-unique-light-signature.jpg"
                       alt=""
                     />
                     <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -205,7 +192,7 @@ function SantaFe() {
                   <div className="w-full relative flex items-center justify-center">
                     <img
                       className="block w-full h-full  object-cover object-center"
-                      src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/front-bumper-with-3d-sculpture.jpg"
+                      src="/assets/images/santa-fe/rear-bumper-integration.png"
                       alt=""
                     />
                     <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -213,7 +200,25 @@ function SantaFe() {
                   <div className="w-full relative flex items-center justify-center">
                     <img
                       className="block w-full h-full  object-cover object-center"
-                      src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/new-18-alloy-wheel-235-60.png"
+                      src="/assets/images/santa-fe/rear-combination-light.jpg"
+                      alt=""
+                    />
+                    <div className="bg-slate-400/20 absolute w-full h-full" />
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
+                  <div className="w-full relative flex items-center justify-center">
+                    <img
+                      className="block w-full h-full  object-cover object-center"
+                      src="/assets/images/santa-fe/front-bumper-with-3d-sculpture.jpg"
+                      alt=""
+                    />
+                    <div className="bg-slate-400/20 absolute w-full h-full" />
+                  </div>
+                  <div className="w-full relative flex items-center justify-center">
+                    <img
+                      className="block w-full h-full  object-cover object-center"
+                      src="/assets/images/santa-fe/new-18-alloy-wheel-235-60.png"
                       alt=""
                     />
                     <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -224,10 +229,10 @@ function SantaFe() {
           </div>
           <div className="sm:w-[80%] w-full flex flex-col items-center justify-center px-4 space-y-8">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold leading-10 text-slate-700 text-[2rem] w-full text-center">
                 Progressive SUV with Proactive Care.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 An advanced SUV that actively consider users satisfactory
                 driving experience of human-oriented, state of the art
                 technology.
@@ -237,7 +242,7 @@ function SantaFe() {
               <div className="w-full h-full relative flex items-center justify-center">
                 <img
                   className="object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-cover-4-2048x1303.jpg"
+                  src="/assets/images/santa-fe/design-cover-4-2048x1303.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -245,7 +250,7 @@ function SantaFe() {
               <div className="w-full h-full relative flex items-center justify-center">
                 <img
                   className="object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/design-cover.png"
+                  src="/assets/images/santa-fe/design-cover.png"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -254,10 +259,10 @@ function SantaFe() {
           </div>
           <div className="sm:w-[80%] w-full flex flex-col items-center justify-center px-4 space-y-8">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold leading-10 text-slate-700 text-[2rem] w-full text-center">
                 Experience space in complete comfort.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 Soft-to-the-touch textures, sweeping character lines and an
                 elevated centre bridge console feature within a cleverly
                 practical cabin space perfectly suited for the busy schedule of
@@ -268,7 +273,7 @@ function SantaFe() {
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/experience-space-in-complete-comfort.jpg"
+                  src="/assets/images/santa-fe/experience-space-in-complete-comfort.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -277,7 +282,7 @@ function SantaFe() {
                 <div className="w-full relative flex items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/bridge-type-high-control.png"
+                    src="/assets/images/santa-fe/bridge-type-high-control.png"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -285,25 +290,7 @@ function SantaFe() {
                 <div className="w-full relative flex items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/shift-by-wire-automatic-transmission.jpg"
-                    alt=""
-                  />
-                  <div className="bg-slate-400/20 absolute w-full h-full" />
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
-                <div className="w-full relative flex items-center justify-center">
-                  <img
-                    className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/123-inch-lcd-cluster.png"
-                    alt=""
-                  />
-                  <div className="bg-slate-400/20 absolute w-full h-full" />
-                </div>
-                <div className="w-full relative flex items-center justify-center">
-                  <img
-                    className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/8-inch-avn-unit.png"
+                    src="/assets/images/santa-fe/shift-by-wire-automatic-transmission.jpg"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -313,7 +300,7 @@ function SantaFe() {
                 <div className="w-full relative flex items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/large-space.png"
+                    src="/assets/images/santa-fe/123-inch-lcd-cluster.png"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -321,25 +308,7 @@ function SantaFe() {
                 <div className="w-full relative flex items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/smart-power-tailgate-signature.png"
-                    alt=""
-                  />
-                  <div className="bg-slate-400/20 absolute w-full h-full" />
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
-                <div className="w-full relative flex items-center justify-center">
-                  <img
-                    className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/walk-in-switch.png"
-                    alt=""
-                  />
-                  <div className="bg-slate-400/20 absolute w-full h-full" />
-                </div>
-                <div className="w-full relative flex items-center justify-center">
-                  <img
-                    className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/dual-2nd-row-usb-ports.png"
+                    src="/assets/images/santa-fe/8-inch-avn-unit.png"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -349,7 +318,43 @@ function SantaFe() {
                 <div className="w-full relative flex items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/rear-door-manual-curtain.png"
+                    src="/assets/images/santa-fe/large-space.png"
+                    alt=""
+                  />
+                  <div className="bg-slate-400/20 absolute w-full h-full" />
+                </div>
+                <div className="w-full relative flex items-center justify-center">
+                  <img
+                    className="block w-full h-full  object-cover object-center"
+                    src="/assets/images/santa-fe/smart-power-tailgate-signature.png"
+                    alt=""
+                  />
+                  <div className="bg-slate-400/20 absolute w-full h-full" />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
+                <div className="w-full relative flex items-center justify-center">
+                  <img
+                    className="block w-full h-full  object-cover object-center"
+                    src="/assets/images/santa-fe/walk-in-switch.png"
+                    alt=""
+                  />
+                  <div className="bg-slate-400/20 absolute w-full h-full" />
+                </div>
+                <div className="w-full relative flex items-center justify-center">
+                  <img
+                    className="block w-full h-full  object-cover object-center"
+                    src="/assets/images/santa-fe/dual-2nd-row-usb-ports.png"
+                    alt=""
+                  />
+                  <div className="bg-slate-400/20 absolute w-full h-full" />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 w-full h-full">
+                <div className="w-full relative flex items-center justify-center">
+                  <img
+                    className="block w-full h-full  object-cover object-center"
+                    src="/assets/images/santa-fe/rear-door-manual-curtain.png"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full " />
@@ -357,7 +362,7 @@ function SantaFe() {
                 <div className="w-full relative flex items-center justify-center">
                   <img
                     className="block w-full h-full  object-cover object-center"
-                    src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/full-auto-ac-system.png"
+                    src="/assets/images/santa-fe/full-auto-ac-system.png"
                     alt=""
                   />
                   <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -369,11 +374,9 @@ function SantaFe() {
                   direction="horizontal"
                   spaceBetween={30}
                   style={{
-                    "--swiper-pagination-color": "rgb(51 65 85)",
-                    "--swiper-navigation-color": "rgb(51 65 85)",
-                    "--swiper-pagination-bullet-inactive-color":
-                      "rgb(51 65 85 / 0.5)",
-                    "--swiper-navigation-size": "25px",
+                    "--swiper-navigation-color": "#FFFFFF",
+                    "--swiper-pagination-color": "#FFFFFF",
+                    "--swiper-navigation-size": "1.6rem",
                   }}
                   pagination={{
                     clickable: true,
@@ -401,10 +404,10 @@ function SantaFe() {
           </div>
           <div className="sm:w-[80%] w-full flex flex-col items-center justify-center px-4 space-y-8">
             <div className="w-full flex flex-col items-center justify-center space-y-4">
-              <h2 className="font-poppins font-semibold text-slate-700 text-[36px]">
+              <h2 className="font-poppins font-semibold leading-10 text-slate-700 text-[2rem] w-full text-center">
                 Safety first and foremost.
               </h2>
-              <p className="font-poppins  text-slate-700 text-[18px] italic">
+              <p className="font-poppins  text-slate-700 text-[1rem] italic w-full text-center">
                 At Hyundai, we believe that a high standard of safety should
                 never be an optional extra. That’s why we created Hyundai
                 SmartSense™[P5] – our standard advanced system of interconnected
@@ -416,7 +419,7 @@ function SantaFe() {
             <div className="w-full h-full flex flex-col items-center justify-center space-y-4">
               <img
                 className="object-cover object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/safety-first-and-foremost-2048x788.png"
+                src="/assets/images/santa-fe/safety-first-and-foremost-2048x788.png"
                 alt=""
               />
             </div>
@@ -424,7 +427,7 @@ function SantaFe() {
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/surround-view-monitor-svm.jpg"
+                  src="/assets/images/santa-fe/surround-view-monitor-svm.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full " />
@@ -432,7 +435,7 @@ function SantaFe() {
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/safe-exit-assist-sea.jpg"
+                  src="/assets/images/santa-fe/safe-exit-assist-sea.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -442,7 +445,7 @@ function SantaFe() {
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/blind-spot-view-monitor-bvm.jpg"
+                  src="/assets/images/santa-fe/blind-spot-view-monitor-bvm.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full " />
@@ -450,7 +453,7 @@ function SantaFe() {
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/blind-spot-collision-avoidance-assist.jpg"
+                  src="/assets/images/santa-fe/blind-spot-collision-avoidance-assist.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
@@ -459,7 +462,7 @@ function SantaFe() {
             <div className="w-full h-full flex flex-col items-center justify-center space-y-4 relative">
               <img
                 className="object-contain object-center"
-                src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/forward-collision-avoidance-assist-fca.jpg"
+                src="/assets/images/santa-fe/forward-collision-avoidance-assist-fca.jpg"
                 alt=""
               />
               <div className="bg-slate-400/20 absolute w-full h-full " />
@@ -468,14 +471,14 @@ function SantaFe() {
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/rear-cross-traffic-collision-avoidance-assist-rcca.jpg"
+                  src="/assets/images/santa-fe/rear-cross-traffic-collision-avoidance-assist-rcca.jpg"
                   alt=""
                 />
               </div>
               <div className="w-full relative flex items-center justify-center">
                 <img
                   className="block w-full h-full  object-cover object-center"
-                  src="https://dealermobilhyundai.id/wp-content/uploads/2021/04/lane-following-assist-lfa.jpg"
+                  src="/assets/images/santa-fe/lane-following-assist-lfa.jpg"
                   alt=""
                 />
                 <div className="bg-slate-400/20 absolute w-full h-full" />
