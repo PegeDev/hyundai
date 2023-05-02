@@ -48,14 +48,14 @@ function Tentang() {
               className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaPhone />
-              <span>0812=9202=0099</span>
+              <span>0812-9202-0099</span>
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=6281292020099"
               className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaWhatsapp />
-              <span>0812=9202=0099</span>
+              <span>0812-9202-0099</span>
             </a>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
@@ -94,14 +94,14 @@ function Tentang() {
               className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] "
             >
               <FaPhone />
-              <span>0812=9202=0099</span>
+              <span>0812-9202-0099</span>
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=6281292020099"
               className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] "
             >
               <FaWhatsapp />
-              <span>0812=9202=0099</span>
+              <span>0812-9202-0099</span>
             </a>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
