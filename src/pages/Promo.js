@@ -1,14 +1,63 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Border from "../assets/images/bg-promo-right.png";
 import Tentang from "../components/Tentang";
 import { Helmet } from "react-helmet";
 function Promo() {
+  const [error, setError] = useState();
+  const [dataStargazer, setDataStargazer] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI STARGAZER",
+    dp: "",
+    tenor: "",
+  });
+  const [dataCreta, setDataCreta] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI CRETA",
+    dp: "",
+    tenor: "",
+  });
+  const [dataIoniq, setDataIoniq] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI IONIQ 5",
+    dp: "",
+    tenor: "",
+  });
+  const [dataPalisade, setDataPalisade] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI PALISADE",
+    dp: "",
+    tenor: "",
+  });
+  const [dataStaria, setDataStaria] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI STARIA",
+    dp: "",
+    tenor: "",
+  });
+  const [dataKona, setDataKona] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI KONA EV",
+    dp: "",
+    tenor: "",
+  });
+  const [dataSanta, setDataSanta] = useState({
+    name: "",
+    nomor: "",
+    tipe: "HYUNDAI SANTA FE",
+    dp: "",
+    tenor: "",
+  });
   const content = [
     {
       title: "stargazer",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/2022/07/Stargazer-Putih_480.webp",
+      imgUrl: "/assets/images/promo/stargazer.png",
 
       desc: [
         { text: "JADI YANG PERTAMA MEMILIKINYA" },
@@ -19,8 +68,7 @@ function Promo() {
     },
     {
       title: "creta",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/su2id-dragon_0-pfx41b9tm1kznezg07cf97zd469ls7nenhsuitbv6o.jpg",
+      imgUrl: "/assets/images/promo/creta.png",
 
       desc: [
         { text: "DP MULAI BELASAN JUTAAN" },
@@ -31,8 +79,7 @@ function Promo() {
     },
     {
       title: "ioniq 5",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/wtw_27-pmqe4jwnv9ruz1uc5heegzrgsy8m3n2sjg7tr6oiw0.webp",
+      imgUrl: "/assets/images/promo/ioniq-5.png",
 
       desc: [
         { text: "Jadi Yang Pertama Memilikinya" },
@@ -43,8 +90,7 @@ function Promo() {
     },
     {
       title: "palisade",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/moonlight-cloud_9-p6hjgg2mjikslmt2j3klf3rz48k3ut8gln4ylnjqg0.png",
+      imgUrl: "/assets/images/promo/palisade.png",
 
       desc: [
         { text: "DP MULAI 100 JUTAAN" },
@@ -55,9 +101,7 @@ function Promo() {
     },
     {
       title: "staria",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/Putih-pbxfuagur15pjfgbinh9vw9sq5jptefrzwey5gh50g.jpg",
-
+      imgUrl: "/assets/images/promo/staria.jpg",
       desc: [
         { text: "DP MURAH 200 JUTAAN" },
         { text: "Ingin Test Drive? Yuk Hubungin Kami" },
@@ -67,9 +111,7 @@ function Promo() {
     },
     {
       title: "kona ev",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/galatic-gray-2-p6hjkfvxl61nxz067bqiilhi06v9ki3e5ey90zmi00.png",
-
+      imgUrl: "/assets/images/promo/kona.jpg",
       desc: [
         { text: "DP MULAI 130 JUTAAN" },
         { text: "Dapatkan Juga Paket Bunga Spesial Free AC HOME CHARGE" },
@@ -79,8 +121,7 @@ function Promo() {
     },
     {
       title: "santa fe",
-      imgUrl:
-        "https://dealermobilhyundai.id/wp-content/uploads/elementor/thumbs/glacier-white-p6hjkxqv70q42ka8b1gfbyz9aif8mr2ajvch58w0ps.png",
+      imgUrl: "/assets/images/promo/santa-fe.png",
       desc: [
         { text: "DP MURAH 80 JUTAAN" },
         { text: "Dapatkan Juga Paket Bunga Spesial Free AC HOME CHARGE" },
@@ -89,6 +130,297 @@ function Promo() {
       ],
     },
   ];
+  const handleDp = (value, name) => {
+    if (name === "stargazer")
+      return setDataStargazer({
+        name: dataStargazer.name,
+        nomor: dataStargazer.nomor,
+        tipe: dataStargazer.tipe,
+        dp: value,
+        tenor: dataStargazer.tenor,
+      });
+
+    if (name === "creta")
+      return setDataCreta({
+        name: dataCreta.name,
+        nomor: dataCreta.nomor,
+        tipe: dataCreta.tipe,
+        dp: value,
+        tenor: dataCreta.tenor,
+      });
+
+    if (name === "ioniq 5")
+      return setDataIoniq({
+        name: dataIoniq.name,
+        nomor: dataIoniq.nomor,
+        tipe: dataIoniq.tipe,
+        dp: value,
+        tenor: dataIoniq.tenor,
+      });
+
+    if (name === "palisade")
+      return setDataPalisade({
+        name: dataPalisade.name,
+        nomor: dataPalisade.nomor,
+        tipe: dataPalisade.tipe,
+        dp: value,
+        tenor: dataPalisade.tenor,
+      });
+
+    if (name === "staria")
+      return setDataStaria({
+        name: dataStaria.name,
+        nomor: dataStaria.nomor,
+        tipe: dataStaria.tipe,
+        dp: value,
+        tenor: dataStaria.tenor,
+      });
+
+    if (name === "kona ev")
+      return setDataKona({
+        name: dataKona.name,
+        nomor: dataKona.nomor,
+        tipe: dataKona.tipe,
+        dp: value,
+        tenor: dataKona.tenor,
+      });
+
+    if (name === "santa fe")
+      return setDataSanta({
+        name: dataSanta.name,
+        nomor: dataSanta.nomor,
+        tipe: dataSanta.tipe,
+        dp: value,
+        tenor: dataSanta.tenor,
+      });
+  };
+  const [btnActive, setBtnActive] = useState("");
+  console.log({
+    dataStargazer,
+    dataCreta,
+    dataIoniq,
+    dataPalisade,
+    dataStaria,
+    dataKona,
+    dataSanta,
+  });
+  const handleForm = (title) => {
+    let name;
+    let nomor;
+    let type;
+    let dp;
+    let tenor;
+
+    setBtnActive(title);
+
+    if (title === "stargazer") {
+      name = dataStargazer.name;
+      nomor = dataStargazer.nomor;
+      type = dataStargazer.type;
+      dp = dataStargazer.dp;
+      tenor = dataStargazer.tenor;
+    }
+    if (title === "creta") {
+      name = dataCreta.name;
+      nomor = dataCreta.nomor;
+      type = dataCreta.type;
+      dp = dataCreta.dp;
+      tenor = dataCreta.tenor;
+    }
+    if (title === "ioniq 5") {
+      name = dataIoniq.name;
+      nomor = dataIoniq.nomor;
+      type = dataIoniq.type;
+      dp = dataIoniq.dp;
+      tenor = dataIoniq.tenor;
+    }
+    if (title === "palisade") {
+      name = dataPalisade.name;
+      nomor = dataPalisade.nomor;
+      type = dataPalisade.type;
+      dp = dataPalisade.dp;
+      tenor = dataPalisade.tenor;
+    }
+    if (title === "staria") {
+      name = dataStaria.name;
+      nomor = dataStaria.nomor;
+      type = dataStaria.type;
+      dp = dataStaria.dp;
+      tenor = dataStaria.tenor;
+    }
+    if (title === "kona ev") {
+      name = dataKona.name;
+      nomor = dataKona.nomor;
+      type = dataKona.type;
+      dp = dataKona.dp;
+      tenor = dataKona.tenor;
+    }
+    if (title === "santa fe") {
+      name = dataSanta.name;
+      nomor = dataSanta.nomor;
+      type = dataSanta.type;
+      dp = dataSanta.dp;
+      tenor = dataSanta.tenor;
+    }
+    if (name === "") return setError("Mohon Isi Nama terlebih Dahulu");
+    if (nomor === "") return setError("Mohon Isi Nomor terlebih Dahulu");
+    if (type === "") return setError("Mohon Isi Type terlebih Dahulu");
+    if (dp === "") return setError("Mohon Isi Dp terlebih Dahulu");
+    if (tenor === "") return setError("Mohon Isi Tenor terlebih Dahulu");
+
+    setError("");
+    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:
+      Nama : ${name}
+      No Handphone : ${nomor}
+      Tipe Mobil : ${type}
+      DP : ${dp}
+      Tenor : ${tenor}
+
+      Terima Kasih
+      ${name}`;
+    const PARAMS = {
+      phone: "6281292020099",
+      text: bodyMessage,
+    };
+    const qsObj = new URLSearchParams(PARAMS);
+    const qs = qsObj.toString();
+    window.location.replace(`https://api.whatsapp.com/send?${qs}`);
+  };
+
+  function handlePhone(name, phone) {
+    phone = String(phone).trim();
+    if (phone.startsWith("0")) {
+      phone = "62" + phone.slice(3);
+    } else if (phone.startsWith("62")) {
+      phone = "62" + phone.slice(2);
+    }
+    if (name === "stargazer")
+      return setDataStargazer({
+        name: dataStargazer.name,
+        nomor: phone,
+        tipe: dataStargazer.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataStargazer.tenor,
+      });
+
+    if (name === "creta")
+      return setDataCreta({
+        name: dataCreta.name,
+        nomor: phone,
+        tipe: dataCreta.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataCreta.tenor,
+      });
+
+    if (name === "ioniq 5")
+      return setDataIoniq({
+        name: dataIoniq.name,
+        nomor: phone,
+        tipe: dataIoniq.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataIoniq.tenor,
+      });
+
+    if (name === "palisade")
+      return setDataPalisade({
+        name: dataPalisade.name,
+        nomor: phone,
+        tipe: dataPalisade.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataPalisade.tenor,
+      });
+
+    if (name === "staria")
+      return setDataStaria({
+        name: dataStaria.name,
+        nomor: phone,
+        tipe: dataStaria.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataStaria.tenor,
+      });
+
+    if (name === "kona ev")
+      return setDataKona({
+        name: dataKona.name,
+        nomor: phone,
+        tipe: dataKona.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataKona.tenor,
+      });
+
+    if (name === "santa fe")
+      return setDataSanta({
+        name: dataSanta.name,
+        nomor: phone,
+        tipe: dataSanta.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataSanta.tenor,
+      });
+  }
+  function handleName(title, value) {
+    if (title === "stargazer")
+      return setDataStargazer({
+        name: value,
+        nomor: dataStargazer.nomor,
+        tipe: dataStargazer.tipe,
+        dp: dataStargazer.dp,
+        tenor: dataStargazer.tenor,
+      });
+
+    if (title === "creta")
+      return setDataCreta({
+        name: value,
+        nomor: dataCreta.nomor,
+        tipe: dataCreta.tipe,
+        dp: dataCreta.dp,
+        tenor: dataCreta.tenor,
+      });
+
+    if (title === "ioniq 5")
+      return setDataIoniq({
+        name: value,
+        nomor: dataIoniq.nomor,
+        tipe: dataIoniq.tipe,
+        dp: dataIoniq.dp,
+        tenor: dataIoniq.tenor,
+      });
+
+    if (title === "palisade")
+      return setDataPalisade({
+        name: value,
+        nomor: dataPalisade.nomor,
+        tipe: dataPalisade.tipe,
+        dp: dataPalisade.dp,
+        tenor: dataPalisade.tenor,
+      });
+
+    if (title === "staria")
+      // return setDataStaria({
+      //   ...dataStaria,name: value,
+      // });
+      return (dataSanta.name = value);
+
+    if (title === "kona ev")
+      // return setDataKona({
+      //   ...dataKona,name: value,
+      // });
+      return (dataKona.name = value);
+
+    if (title === "santa fe")
+      // return setDataSanta({
+      //   ...dataSanta,name: value,
+      // });
+      dataSanta.name = value;
+  }
+  const handleValue = (title) => {
+    if (title === "stargazer") return dataStargazer;
+    if (title === "creta") return dataCreta;
+    if (title === "ioniq 5") return dataIoniq;
+    if (title === "palisade") return dataPalisade;
+    if (title === "staria") return dataStaria;
+    if (title === "kona ev") return dataKona;
+    if (title === "santa fe") return dataSanta;
+  };
   return (
     <>
       <Helmet>
@@ -187,7 +519,7 @@ function Promo() {
                 <img
                   className="w-80 object-contain object-center"
                   src={val.imgUrl}
-                  alt={"product-" + index + 1}
+                  alt={"product-" + (parseInt(index) + 1)}
                 />
                 <div className="font-semibold text-slate-700 font-poppins">
                   <span className="uppercase">Promo {val.title}</span>
@@ -217,26 +549,34 @@ function Promo() {
                 </div>
                 <div className="w-full flex flex-col sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2">
                   <input
+                    onChange={(e) => handleName(val.title, e.target.value)}
+                    value={() => handleValue(val.title).name}
                     className="transition ease-linear duration-300 w-full font-poppins text-sm rounded-[4px] border-2 text-black p-[4px] border-slate-700/50 focus:border-slate-700"
                     placeholder="Masukan Nama Anda"
                   />
                   <input
+                    onChange={(e) => handlePhone(val.title, e.target.value)}
+                    value={() => handleValue(val.title).nomor}
                     className="transition ease-linear duration-300 w-full font-poppins text-sm rounded-[4px] border-2 text-black p-[4px] border-slate-700/50 focus:border-slate-700"
                     placeholder="Masukan No Telepon"
                   />
                 </div>
                 <div className="w-full flex flex-col items-center justify-center sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2 ">
                   <select
-                    className="transition ease-linear duration-300 font-poppins text-sm rounded-[4px] p-[4px] uppercase w-full text-black border-2 border-slate-700/50 focus:border-slate-700"
-                    placeholder="Stargazer"
+                    className="transition ease-linear duration-300 font-poppins text-sm rounded-[4px] disabled:bg-white disabled:text-black p-[4px] uppercase w-full text-black border-2 border-slate-700/50 focus:border-slate-700"
+                    disabled
                   >
-                    <option selected>{val.title}</option>
+                    <option>{val.title}</option>
                   </select>
                   <select
+                    onChange={(e) => {
+                      handleDp(e.target.value, val.title);
+                    }}
                     className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
                     placeholder="Stargazer"
                   >
-                    <option selected>10%</option>
+                    <option>DP</option>
+                    <option>10%</option>
                     <option>20%</option>
                     <option>30%</option>
                   </select>
@@ -246,18 +586,26 @@ function Promo() {
                     className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
                     placeholder="Stargazer"
                   >
-                    <option selected>Tenor</option>
+                    <option>Tenor</option>
                     <option>1 Tahun</option>
                     <option>2 Tahun</option>
                     <option>3 Tahun</option>
                     <option>4 Tahun</option>
                     <option>5 Tahun</option>
                   </select>
-                  <button className="w-full transition ease-linear duration-300 bg-slate-500 hover:text-white text-white font-semibold border-2 border-slate-500 hover:border-slate-700  hover:bg-slate-700 p-[4px] rounded-[4px] ">
+                  <button
+                    onClick={() => handleForm(val.title)}
+                    className="w-full transition ease-linear duration-300 bg-slate-500 hover:text-white text-white font-semibold border-2 border-slate-500 hover:border-slate-700  hover:bg-slate-700 p-[4px] rounded-[4px] "
+                  >
                     Hitung Sekarang
                   </button>
                 </div>
               </div>
+              {error && btnActive === val.title && (
+                <p className="w-full font-poppins text-xs text-red-600">
+                  {error}
+                </p>
+              )}
             </div>
           </div>
         ))}

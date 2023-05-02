@@ -7,13 +7,6 @@ function SimulasiKredit() {
   const [tenor, setTenor] = useState("");
   const [dp, setDp] = useState("");
   const [error, setError] = useState("");
-  console.log({
-    name,
-    nomor,
-    type,
-    tenor,
-    dp,
-  });
   const handleForm = () => {
     if (name === "") return setError("Mohon Isi Nama terlebih Dahulu");
     if (nomor === "") return setError("Mohon Isi Nomor terlebih Dahulu");
