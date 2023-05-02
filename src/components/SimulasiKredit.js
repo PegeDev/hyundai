@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { redirect } from "react-router-dom";
 
 function SimulasiKredit() {
-  const [name, setName] = useState(null);
-  const [nomor, setNomor] = useState(null);
-  const [type, setType] = useState(null);
-  const [tenor, setTenor] = useState(null);
-  const [dp, setDp] = useState(null);
+  const [name, setName] = useState("");
+  const [nomor, setNomor] = useState("");
+  const [type, setType] = useState("");
+  const [tenor, setTenor] = useState("");
+  const [dp, setDp] = useState("");
+  const [error, setError] = useState("");
   console.log({
     name,
     nomor,
@@ -15,24 +15,29 @@ function SimulasiKredit() {
     dp,
   });
   const handleForm = () => {
-    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:
+    if (name === "") return setError("Mohon Isi Nama terlebih Dahulu");
+    if (nomor === "") return setError("Mohon Isi Nomor terlebih Dahulu");
+    if (type === "") return setError("Mohon Isi Type terlebih Dahulu");
+    if (dp === "") return setError("Mohon Isi Dp terlebih Dahulu");
+    if (tenor === "") return setError("Mohon Isi Tenor terlebih Dahulu");
 
-    Nama : ${name}
-    No Handphone : ${nomor}
-    Tipe Mobil : ${type}
-    DP : ${dp}
-    Tenor : ${tenor}
-    
-    Terima Kasih
-    ${name}`;
+    setError("");
+    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:
+      Nama : ${name}
+      No Handphone : ${nomor}
+      Tipe Mobil : ${type}
+      DP : ${dp}
+      Tenor : ${tenor}
+
+      Terima Kasih
+      ${name}`;
     const PARAMS = {
-      phone: "6281387615200",
+      phone: "6281292020099",
       text: bodyMessage,
     };
     const qsObj = new URLSearchParams(PARAMS);
     const qs = qsObj.toString();
-    const url = `https://api.whatsapp.com/send?${qs}`;
-    window.location.replace(url);
+    window.location.replace(`https://api.whatsapp.com/send?${qs}`);
   };
   function normalisasiNomorHP(phone) {
     phone = String(phone).trim();
@@ -61,7 +66,6 @@ function SimulasiKredit() {
             <div className="flex flex-col sm:flex-row w-full space-y-2 sm:space-y-0 sm:space-x-2">
               <input
                 type="text"
-                required
                 onChange={(e) => setName(e.target.value)}
                 className="w-full transition ease-linear duration-300 font-poppins text-sm rounded-[4px] border-2 text-black p-[4px] border-slate-700/50 focus:border-slate-700"
                 placeholder="Masukan Nama Anda"
@@ -83,6 +87,7 @@ function SimulasiKredit() {
                 defaultValue={type}
                 className="transition ease-linear duration-300 font-poppins text-sm rounded-[4px] p-[4px] uppercase w-full text-black border-2 border-slate-700/50 focus:border-slate-700"
               >
+                <option>TIPE</option>
                 <option>HYUNDAI SANTA FE</option>
                 <option>HYUNDAI IONIQ 5</option>
                 <option>HYUNDAI KONA EV</option>
@@ -95,6 +100,7 @@ function SimulasiKredit() {
                 onChange={(e) => setDp(e.target.value)}
                 className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
               >
+                <option>DP</option>
                 <option>10%</option>
                 <option>20%</option>
                 <option>30%</option>
@@ -115,13 +121,16 @@ function SimulasiKredit() {
                 <option>5 Tahun</option>
               </select>
               <button
-                onClick={handleForm}
+                onClick={() => handleForm()}
                 className="w-full transition ease-linear duration-300 bg-slate-500 hover:text-white font-poppins text-white font-semibold border-2 border-slate-500 hover:border-slate-700  hover:bg-slate-700 p-[4px] rounded-[4px] "
               >
                 Hitung Sekarang
               </button>
             </div>
           </div>
+          {error !== "" && (
+            <p className="w-full text-red-600 font-poppins">{error}</p>
+          )}
         </div>
       </div>
     </div>
