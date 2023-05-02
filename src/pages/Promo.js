@@ -204,6 +204,7 @@ function Promo() {
     dataKona,
     dataSanta,
   });
+
   const handleForm = (title) => {
     let name;
     let nomor;
@@ -216,52 +217,53 @@ function Promo() {
     if (title === "stargazer") {
       name = dataStargazer.name;
       nomor = dataStargazer.nomor;
-      type = dataStargazer.type;
+      type = dataStargazer.tipe;
       dp = dataStargazer.dp;
       tenor = dataStargazer.tenor;
     }
     if (title === "creta") {
       name = dataCreta.name;
       nomor = dataCreta.nomor;
-      type = dataCreta.type;
+      type = dataCreta.tipe;
       dp = dataCreta.dp;
       tenor = dataCreta.tenor;
     }
     if (title === "ioniq 5") {
       name = dataIoniq.name;
       nomor = dataIoniq.nomor;
-      type = dataIoniq.type;
+      type = dataIoniq.tipe;
       dp = dataIoniq.dp;
       tenor = dataIoniq.tenor;
     }
     if (title === "palisade") {
       name = dataPalisade.name;
       nomor = dataPalisade.nomor;
-      type = dataPalisade.type;
+      type = dataPalisade.tipe;
       dp = dataPalisade.dp;
       tenor = dataPalisade.tenor;
     }
     if (title === "staria") {
       name = dataStaria.name;
       nomor = dataStaria.nomor;
-      type = dataStaria.type;
+      type = dataStaria.tipe;
       dp = dataStaria.dp;
       tenor = dataStaria.tenor;
     }
     if (title === "kona ev") {
       name = dataKona.name;
       nomor = dataKona.nomor;
-      type = dataKona.type;
+      type = dataKona.tipe;
       dp = dataKona.dp;
       tenor = dataKona.tenor;
     }
     if (title === "santa fe") {
       name = dataSanta.name;
       nomor = dataSanta.nomor;
-      type = dataSanta.type;
+      type = dataSanta.tipe;
       dp = dataSanta.dp;
       tenor = dataSanta.tenor;
     }
+
     if (name === "") return setError("Mohon Isi Nama terlebih Dahulu");
     if (nomor === "") return setError("Mohon Isi Nomor terlebih Dahulu");
     if (type === "") return setError("Mohon Isi Type terlebih Dahulu");
@@ -287,130 +289,69 @@ function Promo() {
     window.location.replace(`https://api.whatsapp.com/send?${qs}`);
   };
 
-  function handlePhone(name, phone) {
-    phone = String(phone).trim();
-    if (phone.startsWith("0")) {
-      phone = "62" + phone.slice(3);
-    } else if (phone.startsWith("62")) {
-      phone = "62" + phone.slice(2);
-    }
+  function handlePhone(name, number) {
+    // let phone = String(number).trim();
+    // if (phone.startsWith("0")) {
+    //   phone = "62" + phone.slice(3);
+    // } else if (phone.startsWith("62")) {
+    //   // phone = "62" + phone.slice(2);
+    // }
     if (name === "stargazer")
-      return setDataStargazer({
-        name: dataStargazer.name,
-        nomor: phone,
-        tipe: dataStargazer.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataStargazer.tenor,
-      });
+      return setDataStargazer({ ...dataStargazer, nomor: number });
 
-    if (name === "creta")
-      return setDataCreta({
-        name: dataCreta.name,
-        nomor: phone,
-        tipe: dataCreta.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataCreta.tenor,
-      });
+    if (name === "creta") return setDataCreta({ ...dataCreta, nomor: number });
 
     if (name === "ioniq 5")
-      return setDataIoniq({
-        name: dataIoniq.name,
-        nomor: phone,
-        tipe: dataIoniq.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataIoniq.tenor,
-      });
+      return setDataIoniq({ ...dataIoniq, nomor: number });
 
     if (name === "palisade")
-      return setDataPalisade({
-        name: dataPalisade.name,
-        nomor: phone,
-        tipe: dataPalisade.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataPalisade.tenor,
-      });
+      return setDataPalisade({ ...dataPalisade, nomor: number });
 
-    if (name === "staria")
-      return setDataStaria({
-        name: dataStaria.name,
-        nomor: phone,
-        tipe: dataStaria.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataStaria.tenor,
-      });
+    if (name === "staria") setDataStaria({ ...dataStaria, nomor: number });
 
-    if (name === "kona ev")
-      return setDataKona({
-        name: dataKona.name,
-        nomor: phone,
-        tipe: dataKona.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataKona.tenor,
-      });
+    if (name === "kona ev") return setDataKona({ ...dataKona, nomor: number });
 
     if (name === "santa fe")
-      return setDataSanta({
-        name: dataSanta.name,
-        nomor: phone,
-        tipe: dataSanta.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataSanta.tenor,
-      });
+      return setDataSanta({ ...dataSanta, nomor: number });
   }
   function handleName(title, value) {
     if (title === "stargazer")
-      return setDataStargazer({
-        name: value,
-        nomor: dataStargazer.nomor,
-        tipe: dataStargazer.tipe,
-        dp: dataStargazer.dp,
-        tenor: dataStargazer.tenor,
-      });
+      return setDataStargazer({ ...dataStargazer, name: value });
 
-    if (title === "creta")
-      return setDataCreta({
-        name: value,
-        nomor: dataCreta.nomor,
-        tipe: dataCreta.tipe,
-        dp: dataCreta.dp,
-        tenor: dataCreta.tenor,
-      });
+    if (title === "creta") return setDataCreta({ ...dataCreta, name: value });
 
-    if (title === "ioniq 5")
-      return setDataIoniq({
-        name: value,
-        nomor: dataIoniq.nomor,
-        tipe: dataIoniq.tipe,
-        dp: dataIoniq.dp,
-        tenor: dataIoniq.tenor,
-      });
+    if (title === "ioniq 5") return setDataIoniq({ ...dataIoniq, name: value });
 
     if (title === "palisade")
-      return setDataPalisade({
-        name: value,
-        nomor: dataPalisade.nomor,
-        tipe: dataPalisade.tipe,
-        dp: dataPalisade.dp,
-        tenor: dataPalisade.tenor,
-      });
+      return setDataPalisade({ ...dataPalisade, name: value });
 
     if (title === "staria")
-      // return setDataStaria({
-      //   ...dataStaria,name: value,
-      // });
-      return (dataSanta.name = value);
+      return setDataStaria({ ...dataStaria, name: value });
 
-    if (title === "kona ev")
-      // return setDataKona({
-      //   ...dataKona,name: value,
-      // });
-      return (dataKona.name = value);
+    if (title === "kona ev") return setDataKona({ ...dataKona, name: value });
 
     if (title === "santa fe")
-      // return setDataSanta({
-      //   ...dataSanta,name: value,
-      // });
-      dataSanta.name = value;
+      return setDataSanta({ ...dataSanta, name: value });
+  }
+  function handleTenor(title, value) {
+    if (title === "stargazer")
+      return setDataStargazer({ ...dataStargazer, tenor: value });
+
+    if (title === "creta") return setDataCreta({ ...dataCreta, tenor: value });
+
+    if (title === "ioniq 5")
+      return setDataIoniq({ ...dataIoniq, tenor: value });
+
+    if (title === "palisade")
+      return setDataPalisade({ ...dataPalisade, tenor: value });
+
+    if (title === "staria")
+      return setDataStaria({ ...dataStaria, tenor: value });
+
+    if (title === "kona ev") return setDataKona({ ...dataKona, tenor: value });
+
+    if (title === "santa fe")
+      return setDataSanta({ ...dataSanta, tenor: value });
   }
   const handleValue = (title) => {
     if (title === "stargazer") return dataStargazer;
@@ -550,13 +491,15 @@ function Promo() {
                 <div className="w-full flex flex-col sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2">
                   <input
                     onChange={(e) => handleName(val.title, e.target.value)}
-                    value={() => handleValue(val.title).name}
+                    // value={() => handleValue(val.title).name}
                     className="transition ease-linear duration-300 w-full font-poppins text-sm rounded-[4px] border-2 text-black p-[4px] border-slate-700/50 focus:border-slate-700"
                     placeholder="Masukan Nama Anda"
                   />
                   <input
                     onChange={(e) => handlePhone(val.title, e.target.value)}
-                    value={() => handleValue(val.title).nomor}
+                    // value={() => handleValue(val.title).nomor}
+                    type="tel"
+                    maxLength={13}
                     className="transition ease-linear duration-300 w-full font-poppins text-sm rounded-[4px] border-2 text-black p-[4px] border-slate-700/50 focus:border-slate-700"
                     placeholder="Masukan No Telepon"
                   />
@@ -573,7 +516,6 @@ function Promo() {
                       handleDp(e.target.value, val.title);
                     }}
                     className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
-                    placeholder="Stargazer"
                   >
                     <option>DP</option>
                     <option>10%</option>
@@ -584,7 +526,9 @@ function Promo() {
                 <div className="w-full flex flex-col  items-center justify-center  sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2 ">
                   <select
                     className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
-                    placeholder="Stargazer"
+                    onChange={(e) => {
+                      handleTenor(val.title, e.target.value);
+                    }}
                   >
                     <option>Tenor</option>
                     <option>1 Tahun</option>
@@ -600,12 +544,13 @@ function Promo() {
                     Hitung Sekarang
                   </button>
                 </div>
+
+                {error && btnActive === val.title && (
+                  <p className="w-full font-poppins text-xs text-red-600">
+                    {error}
+                  </p>
+                )}
               </div>
-              {error && btnActive === val.title && (
-                <p className="w-full font-poppins text-xs text-red-600">
-                  {error}
-                </p>
-              )}
             </div>
           </div>
         ))}
