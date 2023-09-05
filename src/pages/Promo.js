@@ -271,17 +271,9 @@ function Promo() {
     if (tenor === "") return setError("Mohon Isi Tenor terlebih Dahulu");
 
     setError("");
-    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:
-      Nama : ${name}
-      No Handphone : ${nomor}
-      Tipe Mobil : ${type}
-      DP : ${dp}
-      Tenor : ${tenor}
-
-      Terima Kasih
-      ${name}`;
+    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:\n\nNama : ${name}\nNo Handphone : ${nomor}\nTipe Mobil : ${type}\nDP : ${dp}\nTenor : ${tenor}\n\nTerima Kasih\n${name}`;
     const PARAMS = {
-      phone: "6281292020099",
+      phone: "6281319016001",
       text: bodyMessage,
     };
     const qsObj = new URLSearchParams(PARAMS);
@@ -384,17 +376,17 @@ function Promo() {
           <Navbar />
         </div>
         <div className="select-none w-full flex  bg-[#FFF7E2]">
-          <div className=" flex w-full ">
+          <div className="flex w-full ">
             <div className="absolute top-0 left-0 w-[40%] h-full sm:h-[400px] ">
               <img
-                className="w-full h-full  object-contain object-right-top  -scale-x-100  "
+                className="object-contain object-right-top w-full h-full -scale-x-100 "
                 src={Border}
                 alt="banner"
               />
             </div>
-            <div className="w-full  h-full flex flex-col items-center justify-center ">
+            <div className="flex flex-col items-center justify-center w-full h-full ">
               <div className="w-full sm:w-[70%] h-full flex flex-col items-center justify-center sm:my-8 mt-16 mb-8 space-y-4">
-                <div className="w-full h-full flex flex-col items-center justify-center ">
+                <div className="flex flex-col items-center justify-center w-full h-full ">
                   <div className="font-poppins mt-6 text-slate-700 text-[0.8rem] sm:text-[32px] font-semibold text-center">
                     <p className="">HYUNDAI JAKARTA CENTER</p>
                   </div>
@@ -409,13 +401,13 @@ function Promo() {
                 </div>
                 <div className="w-[70%] sm:w-[60%] h-full ">
                   <div className="border-t-2 border-slate-700" />
-                  <div className=" grid grid-cols-3  items-center justify-around py-2 divide-x-2  divide-slate-700">
-                    <div className="flex  w-full h-full items-center justify-center">
+                  <div className="grid items-center justify-around grid-cols-3 py-2 divide-x-2 divide-slate-700">
+                    <div className="flex items-center justify-center w-full h-full">
                       <span className="font-poppins font-extrabold sm:text-[38px] text-slate-700">
                         TDP
                       </span>
                     </div>
-                    <div className="flex  w-full h-full flex-col items-center justify-center leading-none">
+                    <div className="flex flex-col items-center justify-center w-full h-full leading-none">
                       <p className="font-poppins font-extrabold text-[14px] sm:text-[48px] text-red-500">
                         10
                       </p>
@@ -423,7 +415,7 @@ function Promo() {
                         JUTAAN
                       </p>
                     </div>
-                    <div className="flex  w-full h-full flex-col items-center justify-center leading-none">
+                    <div className="flex flex-col items-center justify-center w-full h-full leading-none">
                       <span className="font-poppins font-extrabold text-[10px] sm:text-[32px] text-slate-700">
                         APRIL
                       </span>
@@ -443,7 +435,7 @@ function Promo() {
             </div>
             <div className="absolute  w-[40%] top-0 right-0 h-full  sm:h-[400px]">
               <img
-                className="w-full h-full object-contain object-right-top    "
+                className="object-contain object-right-top w-full h-full "
                 src={Border}
                 alt="banner"
               />
@@ -451,14 +443,14 @@ function Promo() {
           </div>
         </div>
         {content.map((val, index) => (
-          <div key={index} className="w-full container mx-auto ">
-            <div className="flex flex-col items-center justify-center sm:space-x-4 my-20 sm:flex-row sm:items-start">
+          <div key={index} className="container w-full mx-auto ">
+            <div className="flex flex-col items-center justify-center my-20 sm:space-x-4 sm:flex-row sm:items-start">
               <div
                 data-aos="fade-up"
                 className="w-full flex flex-col items-center justify-center sm:w-[320px] h-full"
               >
                 <img
-                  className="w-80 object-contain object-center"
+                  className="object-contain object-center w-80"
                   src={val.imgUrl}
                   alt={"product-" + (parseInt(index) + 1)}
                 />
@@ -467,7 +459,7 @@ function Promo() {
                 </div>
               </div>
               <div className="sm:w-[330px] w-full p-[10px] h-full flex flex-col text-slate-700 space-y-2">
-                <div className="uppercase font-poppins  text-left space-y-2">
+                <div className="space-y-2 text-left uppercase font-poppins">
                   <h2 className=" leading-none font-semibold text-[32px]">
                     {val.desc[0].text}
                   </h2>
@@ -475,7 +467,7 @@ function Promo() {
                     {val.desc[1].text}
                   </p>
                 </div>
-                <div className="font-poppins  text-left">
+                <div className="text-left font-poppins">
                   <h2 className="font-light italic text-[19px]">
                     {val.desc[2].text}
                   </h2>
@@ -488,7 +480,7 @@ function Promo() {
                 <div className="font-poppins font-semibold text-slate-700 text-[18px]">
                   <h2 className="">Hitung Cicilan Anda Disini</h2>
                 </div>
-                <div className="w-full flex flex-col sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2">
+                <div className="flex flex-col w-full space-x-0 space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
                   <input
                     onChange={(e) => handleName(val.title, e.target.value)}
                     // value={() => handleValue(val.title).name}
@@ -504,7 +496,7 @@ function Promo() {
                     placeholder="Masukan No Telepon"
                   />
                 </div>
-                <div className="w-full flex flex-col items-center justify-center sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2 ">
+                <div className="flex flex-col items-center justify-center w-full space-x-0 space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 ">
                   <select
                     className="transition ease-linear duration-300 font-poppins text-sm rounded-[4px] disabled:bg-white disabled:text-black p-[4px] uppercase w-full text-black border-2 border-slate-700/50 focus:border-slate-700"
                     disabled
@@ -523,7 +515,7 @@ function Promo() {
                     <option>30%</option>
                   </select>
                 </div>
-                <div className="w-full flex flex-col  items-center justify-center  sm:flex-row space-y-2 space-x-0  sm:space-y-0 sm:space-x-2 ">
+                <div className="flex flex-col items-center justify-center w-full space-x-0 space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 ">
                   <select
                     className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
                     onChange={(e) => {
@@ -546,7 +538,7 @@ function Promo() {
                 </div>
 
                 {error && btnActive === val.title && (
-                  <p className="w-full font-poppins text-xs text-red-600">
+                  <p className="w-full text-xs text-red-600 font-poppins">
                     {error}
                   </p>
                 )}
@@ -554,9 +546,9 @@ function Promo() {
             </div>
           </div>
         ))}
-        <div data-aos="fade-up" className=" mx-auto w-fit my-16 px-4">
+        <div data-aos="fade-up" className="px-4 mx-auto my-16 w-fit">
           <div className=" w-full h-full text-white rounded-[10px] bg-slate-700 flex flex-col sm:flex-row items-center justify-center">
-            <div className=" px-8 py-4 font-poppins ">
+            <div className="px-8 py-4 font-poppins">
               <p className="font-light uppercase">HyundaiJakartaCenter.id</p>
               <h2 className="font-extrabold text-[32px]">
                 Kenapa Membeli Disini ?

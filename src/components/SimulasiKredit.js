@@ -15,17 +15,9 @@ function SimulasiKredit() {
     if (tenor === "") return setError("Mohon Isi Tenor terlebih Dahulu");
 
     setError("");
-    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:
-      Nama : ${name}
-      No Handphone : ${nomor}
-      Tipe Mobil : ${type}
-      DP : ${dp}
-      Tenor : ${tenor}
-
-      Terima Kasih
-      ${name}`;
+    const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:\n\nNama : ${name}\nNo Handphone : ${nomor}\nTipe Mobil : ${type}\nDP : ${dp}\nTenor : ${tenor}\n\nTerima Kasih\n${name}`;
     const PARAMS = {
-      phone: "6281292020099",
+      phone: "6281319016001",
       text: bodyMessage,
     };
     const qsObj = new URLSearchParams(PARAMS);
@@ -42,28 +34,28 @@ function SimulasiKredit() {
     setNomor(phone.replace(/[- .]/g, ""));
   }
   return (
-    <div className=" w-full h-full flex  py-8 ">
+    <div className="flex w-full h-full py-8 ">
       <div className="w-full h-full items-center justify-center bg-white flex shadow-sm shadow-white container mx-auto overflow-hidden rounded-[10px]">
-        <div className="hidden sm:flex w-full h-full">
+        <div className="hidden w-full h-full sm:flex">
           <img
-            className="w-full h-full object-cover object-center"
+            className="object-cover object-center w-full h-full"
             src="/assets/images/123-inch-lcd-cluster.png"
             alt="promo"
           />
         </div>
-        <div className="w-full h-full px-4 flex flex-col items-center justify-center space-y-2 py-8 sm:py-0 ">
+        <div className="flex flex-col items-center justify-center w-full h-full px-4 py-8 space-y-2 sm:py-0 ">
           <div className="flex-1  font-poppins  font-semibold text-slate-700 text-[36px] ">
             <h2 className="">Simulasi Kredit</h2>
           </div>
-          <div className="flex-1 w-full h-full space-y-2 py-8 sm:py-0">
-            <div className="flex flex-col sm:flex-row w-full space-y-2 sm:space-y-0 sm:space-x-2">
+          <div className="flex-1 w-full h-full py-8 space-y-2 sm:py-0">
+            <div className="flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
               <input
                 type="text"
                 onChange={(e) => setName(e.target.value)}
                 className="w-full transition ease-linear duration-300 font-poppins text-sm rounded-[4px] border-2 text-black p-[4px] border-slate-700/50 focus:border-slate-700"
                 placeholder="Masukan Nama Anda"
               />
-              <div className="w-full flex flex-col">
+              <div className="flex flex-col w-full">
                 <input
                   onChange={(e) => normalisasiNomorHP(e.target.value)}
                   value={nomor}
@@ -74,7 +66,7 @@ function SimulasiKredit() {
                 />
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row w-full space-y-2 sm:space-y-0 sm:space-x-2">
+            <div className="flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
               <select
                 onChange={(e) => setType(e.target.value)}
                 defaultValue={type}
@@ -100,7 +92,7 @@ function SimulasiKredit() {
               </select>
             </div>
 
-            <div className="flex flex-col sm:flex-row w-full space-y-2 sm:space-y-0 sm:space-x-2">
+            <div className="flex flex-col w-full space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
               <select
                 className="rounded-[4px] p-[4px] w-full text-black border-2 border-slate-700/50 uppercase focus:border-slate-700"
                 defaultValue={tenor}

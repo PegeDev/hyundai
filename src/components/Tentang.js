@@ -28,10 +28,10 @@ function Tentang() {
           />
         </svg>
       </div>
-      <div className=" w-full h-full flex flex-col items-center justify-center  bg-slate-800 py-8">
+      <div className="flex flex-col items-center justify-center w-full h-full py-8 bg-slate-800">
         <div
           data-aos="zoom-in"
-          className="mb-8 flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center mb-8"
         >
           <h1 className="font-poppins font-semibold sm:text-[46px] text-[28px] text-white">
             Tentang Sales
@@ -44,18 +44,18 @@ function Tentang() {
               Cepy Setiyawan
             </h1>
             <a
-              href="https://api.whatsapp.com/send?phone=6281292020099"
+              href="https://api.whatsapp.com/send?phone=6281319016001"
               className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaPhone />
-              <span>0812-9202-0099</span>
+              <span>0813-1901-6001</span>
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=6281292020099"
+              href="https://api.whatsapp.com/send?phone=6281319016001"
               className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaWhatsapp />
-              <span>0812-9202-0099</span>
+              <span>0813-1901-6001</span>
             </a>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
@@ -65,21 +65,21 @@ function Tentang() {
               <span>cepy_hyundai_jabodetabek</span>
             </a>
           </div>
-          <div className="avatar items-center justify-center">
-            <div className="w-44 sm:w-72 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
+          <div className="items-center justify-center avatar">
+            <div className="rounded-full w-44 sm:w-72 ring ring-white ring-offset-base-100 ring-offset-2">
               <img
-                className="hover:scale-110 transition ease-linear duration-300"
+                className="transition duration-300 ease-linear hover:scale-110"
                 src={Sales}
                 alt="sales"
               />
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:hidden items-center justify-around w-full h-full container mx-auto">
+        <div className="container flex flex-col items-center justify-around w-full h-full mx-auto sm:hidden">
           <div className="avatar">
             <div className="w-56 rounded-full ring ring-white ring-offset-base-100 ring-offset-2">
               <img
-                className="hover:scale-110 transition ease-linear duration-300"
+                className="transition duration-300 ease-linear hover:scale-110"
                 src={Sales}
                 alt="sales"
               />
@@ -90,18 +90,18 @@ function Tentang() {
               Cepy Setiyawan
             </h1>
             <a
-              href="https://api.whatsapp.com/send?phone=6281292020099"
+              href="https://api.whatsapp.com/send?phone=6281319016001"
               className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] "
             >
               <FaPhone />
-              <span>0812-9202-0099</span>
+              <span>0813-1901-6001</span>
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=6281292020099"
+              href="https://api.whatsapp.com/send?phone=6281319016001"
               className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] "
             >
               <FaWhatsapp />
-              <span>0812-9202-0099</span>
+              <span>0813-1901-6001</span>
             </a>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
@@ -116,8 +116,8 @@ function Tentang() {
         <div className="sm:w-[65%] w-full px-4 h-full py-4">
           <SimulasiKredit />
         </div>
-        <div className="py-8 space-y-8 flex flex-col items-center justify-center font-poppins text-white container mx-auto">
-          <div className="w-full h-full border-white border-b-2" />
+        <div className="container flex flex-col items-center justify-center py-8 mx-auto space-y-8 text-white font-poppins">
+          <div className="w-full h-full border-b-2 border-white" />
           <span className="">
             <span className="space-x-1">
               <span>2023 - Hyundai | Design by</span>
