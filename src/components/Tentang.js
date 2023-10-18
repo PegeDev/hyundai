@@ -44,18 +44,18 @@ function Tentang() {
               Cepy Setiyawan
             </h1>
             <a
-              href="https://api.whatsapp.com/send?phone=6281319016001"
+              href={`https://api.whatsapp.com/send?phone=${process.env.REACT_APP_NUMBER_WA}`}
               className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaPhone />
-              <span>{process.env.PHONE_NUMBER}</span>
+              <span>{process.env.REACT_APP_PHONE_NUMBER}</span>
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=6281319016001"
+              href={`https://api.whatsapp.com/send?phone=${process.env.REACT_APP_NUMBER_WA}`}
               className="inline-flex items-center text-left space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins sm:text-[24px] text-[16px] "
             >
               <FaWhatsapp />
-              <span>{process.env.PHONE_NUMBER}</span>
+              <span>{process.env.REACT_APP_PHONE_NUMBER}</span>
             </a>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"
@@ -90,18 +90,18 @@ function Tentang() {
               Cepy Setiyawan
             </h1>
             <a
-              href="https://api.whatsapp.com/send?phone=6281319016001"
+              href={`https://api.whatsapp.com/send?phone=${process.env.REACT_APP_NUMBER_WA}`}
               className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] "
             >
               <FaPhone />
-              <span>{process.env.PHONE_NUMBER}</span>
+              <span>{process.env.REACT_APP_PHONE_NUMBER}</span>
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=6281319016001"
+              href={`https://api.whatsapp.com/send?phone=${process.env.REACT_APP_NUMBER_WA}`}
               className="inline-flex items-center space-x-2 text-white transition ease-linear duration-300 cursor-pointer hover:opacity-100 opacity-70 font-poppins text-[18px] "
             >
               <FaWhatsapp />
-              <span>{process.env.PHONE_NUMBER}</span>
+              <span>{process.env.REACT_APP_PHONE_NUMBER}</span>
             </a>
             <a
               href="https://www.instagram.com/cepy_hyundai_jabodetabek/"

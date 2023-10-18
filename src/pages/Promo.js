@@ -273,7 +273,7 @@ function Promo() {
     setError("");
     const bodyMessage = `Mohon Diberikan Rincian Kredit Mobil:\n\nNama : ${name}\nNo Handphone : ${nomor}\nTipe Mobil : ${type}\nDP : ${dp}\nTenor : ${tenor}\n\nTerima Kasih\n${name}`;
     const PARAMS = {
-      phone: "6281319016001",
+      phone: process.env.REACT_APP_NUMBER_WA,
       text: bodyMessage,
     };
     const qsObj = new URLSearchParams(PARAMS);
